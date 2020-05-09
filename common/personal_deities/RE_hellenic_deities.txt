@@ -9,7 +9,7 @@ athena = {
 		factor = 1
 	}
 }
-demetra = {
+demeter = {
 	development_cost = -0.10
 	production_effienciy = 0.10
 	

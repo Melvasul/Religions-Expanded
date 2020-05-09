@@ -3,15 +3,49 @@ country_decisions = {
 		major = yes
 		potential = {
 			culture_group = byzantine
-			not = { religion = hellenism }
+			NOT = { religion = hellenism }
 		}
 		allow = {
 			culture_group = byzantine
-			not = { religion = hellenism }
+			NOT = { religion = hellenism }
 		}
 		effect = {
 			country_event = {
 				id = RE_Hellenic_Events.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = yes
+			}
+		}
+	}
+
+	RE_decision_hellenic_deities = {
+		major = yes
+		potential = {
+			religion = hellenism
+		}
+		allow = {
+			religion = hellenism
+			NOT = {
+				OR = {
+					has_ruler_modifier = re_hellenic_aphrodite
+					has_ruler_modifier = re_hellenic_apollon
+					has_ruler_modifier = re_hellenic_ares
+					has_ruler_modifier = re_hellenic_artemis
+					has_ruler_modifier = re_hellenic_dionysus
+					has_ruler_modifier = re_hellenic_hephaistos
+					has_ruler_modifier = re_hellenic_hermes
+					has_ruler_modifier = re_hellenic_hestia
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = RE_Hellenic_Events.2
 			}
 		}
 		ai_will_do = {

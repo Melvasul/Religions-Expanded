@@ -49,7 +49,8 @@ country_event = {
 		}
 
 		add_ruler_modifier = {
-			nae
+			name = re_hellenic_aphrodite
+			duration = -1
 		}
 	}
 
@@ -60,6 +61,11 @@ country_event = {
 		modifier = {
 			factor = 8
 		}
+
+		add_ruler_modifier = {
+			name = re_hellenic_apollon
+			duration = -1
+		}
 	}
 
 	option = {
@@ -68,6 +74,11 @@ country_event = {
 
 		modifier = {
 			factor = 8
+		}
+
+		add_ruler_modifier = {
+			name = re_hellenic_ares
+			duration = -1
 		}
 	}
 
@@ -78,6 +89,11 @@ country_event = {
 		modifier = {
 			factor = 8
 		}
+
+		add_ruler_modifier = {
+			name = re_hellenic_artemis
+			duration = -1
+		}
 	}
 
 	option = {
@@ -86,6 +102,11 @@ country_event = {
 
 		modifier = {
 			factor = 8
+		}
+
+		add_ruler_modifier = {
+			name = re_hellenic_dionysus
+			duration = -1
 		}
 	}
 
@@ -96,6 +117,11 @@ country_event = {
 		modifier = {
 			factor = 8
 		}
+
+		add_ruler_modifier = {
+			name = re_hellenic_hephaistos
+			duration = -1
+		}
 	}
 
 	option = {
@@ -105,6 +131,11 @@ country_event = {
 		modifier = {
 			factor = 8
 		}
+
+		add_ruler_modifier = {
+			name = re_hellenic_hermes
+			duration = -1
+		}
 	}
 
 	option = {
@@ -113,6 +144,11 @@ country_event = {
 
 		modifier = {
 			factor = 8
+		}
+
+		add_ruler_modifier = {
+			name = re_hellenic_hestia
+			duration = -1
 		}
 	}
 }
