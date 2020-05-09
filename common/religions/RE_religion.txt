@@ -1,0 +1,48 @@
+# If you add religions, and use those tags, do not change them without changing everywhere they are used.
+
+# Uses all 'modifiers' possible thats exported as a Modifier.
+
+hellenic = {
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	
+	center_of_religion = 146 # Athens
+
+	flags_with_emblem_percentage = 10
+	flag_emblem_index_range = { 83 96 }
+
+	hellenism = {
+		color = { 72 0 127 }
+		icon = 30
+		province = {
+			local_missionary_strength = 0.04
+		}
+		country = {
+			global_tax_modifier = 0.05
+			tolerance_heathen = 2
+		}
+		country_as_secondary = {
+			infantry_power = 0.1
+			global_tax_modifier = 0.1
+		}
+		
+		personal_deity = yes
+		
+		on_convert = {
+			change_religion = hellenism
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+
+		personal_deity = yes
+
+		heretic = { OLD_HELLENISM }
+	}
+	
+	harmonized_modifier = harmonized_pagan
+	crusade_name = CRUSADE
+}

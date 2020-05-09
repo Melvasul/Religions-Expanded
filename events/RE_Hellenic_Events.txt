@@ -1,0 +1,118 @@
+namespace = RE_Hellenic_Events
+
+country_event = {
+	id = RE_Hellenic_Events.1
+	title = RE_Hellenic_Events.1.T
+	desc = RE_Hellenic_Events.1.D
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = RE_Hellenic_Events.1.OPT1
+		factor = 50
+
+		modifier = {
+			factor = 2
+		}
+
+		change_religion = hellenism
+		capital_scope = {
+			change_religion = hellenism
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.1.OPT2
+		factor = 50
+
+		modifier = {
+			factor = 2
+		}
+	}
+}
+
+country_event = {
+	id = RE_Hellenic_Events.2
+	title = RE_Hellenic_Events.2.T
+	desc = RE_Hellenic_Events.2.D
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT1
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+
+		add_ruler_modifier = {
+			nae
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT2
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT3
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT4
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT5
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT6
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT7
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+	}
+
+	option = {
+		name = RE_Hellenic_Events.2.OPT8
+		factor = 12
+
+		modifier = {
+			factor = 8
+		}
+	}
+}

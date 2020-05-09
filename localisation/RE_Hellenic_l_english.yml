@@ -1,0 +1,38 @@
+﻿l_english:
+ hellenic: "Hellenic"
+ hellenism: "Hellenism"
+
+ #Personal Deities
+ athena: "Athena"
+ athena_desc: "Goddess of reason, wisdom, intelligence, skill, peace, warfare, battle strategy, and handicrafts. According to most traditions, she was born from Zeus's forehead, fully formed and armored. She is depicted as being crowned with a crested helm, armed with shield and spear, and wearing the aegis over a long dress."
+ demeter: "Demeter"
+ demeter_desc: "Goddess of grain, agriculture, harvest, growth, and nourishment. Her symbols are the cornucopia, wheat-ears, the winged serpent, and the lotus staff. Her sacred animals include pigs and snakes. Her sacred animals include the heifer, the peacock, and the cuckoo."
+ hades: "Hades"
+ hades_desc: "King of the underworld and the dead. God of wealth. His consort is Persephone. His attributes are the drinking horn or cornucopia, key, sceptre, and the three-headed dog Cerberus."
+ hera: "Hera"
+ hera_desc: "Queen of the gods, and goddess of marriage, women, childbirth, heirs, kings, and empires. She is the wife and sister of Zeus"
+ poseidon: "Poseidon"
+ poseidon_desc: "God of the sea, rivers, floods, droughts, and earthquakes. He is a son of Cronus and Rhea, and the brother of Zeus and Hades. He rules one of the three realms of the universe, as king of the sea and the waters."
+ zeus: "Zeus"
+ zeus_desc: "King of the gods, ruler of Mount Olympus, and god of the sky, weather, thunder, lightning, law, order, and justice. "
+
+ #Events
+ RE_Hellenic_Events.1.T: "Hellenism Revanched"
+ RE_Hellenic_Events.1.D: ""
+ RE_Hellenic_Events.1.OPT1: "We will seek the faith of our forefathers"
+ RE_Hellenic_Events.1.OPT2: "Never will this heresy return to life"
+
+ RE_Hellenic_Events.1.T: "The minor dieteis"
+ RE_Hellenic_Events.1.D: ""
+ RE_Hellenic_Events.1.OPT1: "Aphrodite will guide our heart "
+ RE_Hellenic_Events.1.OPT2: "May Apollon enlighten us"
+ RE_Hellenic_Events.1.OPT3: "Our fiury belongs to Ares"
+ RE_Hellenic_Events.1.OPT4: "Artemis shall protect our daughters"
+ RE_Hellenic_Events.1.OPT5: "Dionysus will bring us joy"
+ RE_Hellenic_Events.1.OPT6: "Hephaistos will forge us"
+ RE_Hellenic_Events.1.OPT7: "Hermes will help us"
+ RE_Hellenic_Events.1.OPT8: "Hestia shall guard our homes"
+
+ #Decisions
+ RE_decision_allow_hellenic_title: "What is this Hellenism they talk about?"
+ RE_decision_allow_hellenic_desc: ""
