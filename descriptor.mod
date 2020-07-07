@@ -1,10 +1,9 @@
-version="1.29.5"
+version="1.30.3"
 tags={
-	"Balance"
+	"Alternative History"
 	"Events"
-	"Expansion"
 	"Gameplay"
 	"Religion"
 }
 name="Religions Expanded"
-supported_version="1.29.6"
+supported_version="1.30.3"
