@@ -1,0 +1,135 @@
+namespace = RE_Norse_Events
+country_event = {
+	id = RE_Norse_Events.1
+	title = RE_Norse_Events.1.t
+	desc = RE_Norse_Events.1.d
+	picture = CORRUPTION_eventPicture
+	trigger = {
+		culture_group = scandinavian
+	}
+	option = {
+		name = RE_Norse_Events.1.a
+		random_owned_province = {
+			set_province_flag = RE_Norse_current_infected
+		}
+	}
+	option = {
+		name = RE_Norse_Events.1.b
+	}
+}
+
+province_event = {
+	id = RE_Norse_Events.2
+	title = RE_Norse_Events.2.t
+	desc = RE_Norse_Events.2.d
+	picture = CORRUPTION_eventPicture
+	mean_time_to_happen = {
+		days = 30
+	}
+	trigger = {
+		has_province_flag = RE_Norse_current_infected
+	}
+	option = {
+		name = RE_Norse_Events.2.a
+		goto = ROOT
+		change_religion = norse_pagan_reformed
+		add_unrest = 5
+		clr_province_flag = RE_Norse_current_infected
+		if = {
+			limit = {
+				any_neighbor_province = {
+					owned_by = ROOT
+					NOT = {
+						religion = norse_pagan_reformed
+					}
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						religion = norse_pagan_reformed
+					}
+				}
+				set_province_flag = RE_Norse_current_infected
+			}
+		}
+		else = {
+			owner = {
+				random_owned_province = {
+					limit = {
+						NOT = {
+							religion = norse_pagan_reformed
+						}
+					}
+					set_province_flag = RE_Norse_current_infected
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = RE_Norse_Events.4
+	title = RE_Norse_Events.4.t
+	desc = RE_Norse_Events.4.d
+	picture = CORRUPTION_eventPicture
+	trigger = {
+		owner = {
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+		}
+		religion = norse_pagan_reformed
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	option = {
+		goto = ROOT
+		name = RE_Norse_Events.4.a
+		norse_pagan_reformed_rebels = 1
+		random_neighbor_province = {
+			add_unrest = 5
+		}
+	}
+}
+
+country_event = {
+	id = RE_Norse_Events.5
+	title = RE_Norse_Events.5.t
+	desc = RE_Norse_Events.5.d
+	picture = CORRUPTION_eventPicture
+	trigger = {
+		religion = norse_pagan_reformed
+		any_owned_province = {
+			NOT = {
+				has_province_flag = RE_Norse_current_infected
+			}
+		}
+	}
+	option = {
+		name = RE_Norse_Events.5.a
+		ai_chance = {
+			factor = 1
+		}
+		random_neighbor_country = {
+			limit = {
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owned_by = ROOT
+					}
+				}
+				set_province_flag = RE_Norse_current_infected
+			}
+		}
+	}
+	option = {
+		name = RE_Norse_Events.5.b
+	}
+}
