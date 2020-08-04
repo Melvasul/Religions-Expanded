@@ -1,33 +1,53 @@
 namespace = RE_Norse_Events
+#Where are the Ice Giants?
 country_event = {
 	id = RE_Norse_Events.1
 	title = RE_Norse_Events.1.t
 	desc = RE_Norse_Events.1.d
-	picture = CORRUPTION_eventPicture
+	picture = STREET_SPEECH_eventPicture
 	trigger = {
 		culture_group = scandinavian
+		NOT = {
+			has_country_flag = RE_Norse_hail_odin
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
 	}
 	option = {
 		name = RE_Norse_Events.1.a
+		ai_chance = {
+			factor = 1
+		}
 		random_owned_province = {
 			set_province_flag = RE_Norse_current_infected
 		}
+		set_country_flag = RE_Norse_hail_odin
 	}
 	option = {
 		name = RE_Norse_Events.1.b
 	}
 }
 
+#Flock is Gathering
 province_event = {
 	id = RE_Norse_Events.2
 	title = RE_Norse_Events.2.t
 	desc = RE_Norse_Events.2.d
-	picture = CORRUPTION_eventPicture
+	picture = ANGRY_MOB_eventPicture
 	mean_time_to_happen = {
-		days = 30
+		months = 60
 	}
 	trigger = {
-		has_province_flag = RE_Norse_current_infected
+		OR = {
+			AND = {
+				has_province_flag = RE_Norse_previous_infected
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+			}
+			has_province_flag = RE_Norse_current_infected
+		}
 	}
 	option = {
 		name = RE_Norse_Events.2.a
@@ -35,6 +55,7 @@ province_event = {
 		change_religion = norse_pagan_reformed
 		add_unrest = 5
 		clr_province_flag = RE_Norse_current_infected
+		set_province_flag = RE_Norse_previous_infected
 		if = {
 			limit = {
 				any_neighbor_province = {
@@ -69,11 +90,42 @@ province_event = {
 	}
 }
 
+#Clear infection flags
+country_event = {
+	id = RE_Norse_Events.3
+	title = RE_Norse_Events.3.t
+	desc = RE_Norse_Events.3.d
+	picture = CORRUPTION_eventPicture
+	hidden = yes
+	trigger = {
+		religion = norse_pagan_reformed
+		all_owned_province = {
+			religion = norse_pagan_reformed
+		}
+		any_owned_province = {
+			OR = {
+				has_province_flag = RE_Norse_current_infected
+				has_province_flag = RE_Norse_previous_infected
+			}
+		}	
+	}
+	immediate = {
+		every_owned_province = {
+			clr_province_flag = RE_Norse_current_infected
+			clr_province_flag = RE_Norse_previous_infected
+		}
+	}
+	option = {
+		name = RE_Norse_Events.3.a
+	}
+}
+
+#Hail to Odin!
 province_event = {
 	id = RE_Norse_Events.4
 	title = RE_Norse_Events.4.t
 	desc = RE_Norse_Events.4.d
-	picture = CORRUPTION_eventPicture
+	picture = BATTLE_eventPicture
 	trigger = {
 		owner = {
 			NOT = {
@@ -88,25 +140,38 @@ province_event = {
 	option = {
 		goto = ROOT
 		name = RE_Norse_Events.4.a
-		norse_pagan_reformed_rebels = 1
+		norse_pagan_reformed_rebels = 2
 		random_neighbor_province = {
+			limit = {
+				owned_by = ROOT
+			}
 			add_unrest = 5
+			norse_pagan_reformed_rebels = 1
 		}
 	}
 }
 
+#Spread Faith?
 country_event = {
 	id = RE_Norse_Events.5
 	title = RE_Norse_Events.5.t
 	desc = RE_Norse_Events.5.d
-	picture = CORRUPTION_eventPicture
+	picture = DIPLOMACY_eventPicture
 	trigger = {
 		religion = norse_pagan_reformed
-		any_owned_province = {
+		all_owned_province = {
+			any_neighbor_province = {
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+			}
 			NOT = {
 				has_province_flag = RE_Norse_current_infected
 			}
 		}
+	}
+	mean_time_to_happen = {
+		months = 200
 	}
 	option = {
 		name = RE_Norse_Events.5.a
@@ -124,12 +189,46 @@ country_event = {
 					any_neighbor_province = {
 						owned_by = ROOT
 					}
+					NOT = {
+						religion = norse_pagan_reformed
+					}
 				}
-				set_province_flag = RE_Norse_current_infected
+				change_religion = norse_pagan_reformed
+				owner = {
+					country_event = {
+						id = RE_Norse_Events.6
+					}
+				}
 			}
+		}
+		add_prestige = 5
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
 		}
 	}
 	option = {
 		name = RE_Norse_Events.5.b
+		add_prestige = -5
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+	}
+}
+
+#Norse Heathens?
+country_event = {
+	id = RE_Norse_Events.6
+	title = RE_Norse_Events.6.t
+	desc = RE_Norse_Events.6.d
+	picture = PROTESTANT_GREAT_REFORMER_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = RE_Norse_Events.6.a
+		add_casus_belli = {
+			type = cb_border_war
+			target = FROM
+		}
 	}
 }

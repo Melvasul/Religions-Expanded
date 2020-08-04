@@ -1,0 +1,22 @@
+﻿l_english:
+    RE_Norse_Events.1.t: "Where are the Ice Giants?"
+    RE_Norse_Events.1.d: "Pray for your soul to be saved, they say, as you are a sinner since the day you are born. Otherwise, the fires of hell shall consume your flesh and devils shall dance upon you, picking you with their sharpen forks. The very same thing happens when you do not obey to priests' demands. Of course.\n\nMeanwhile, Odin just simply promised to kill all ice giants.\nThe question is quite simple: have you seen any ice giant recently?"
+    RE_Norse_Events.1.a: "No ice giants anywhere to be seen! Hail Odin!"
+    RE_Norse_Events.1.b: "I want priests to have my gold, my daughters, my soul and whatever else they want..."
+    
+    RE_Norse_Events.2.t: "Flock is Gathering"
+    RE_Norse_Events.2.d: "The news is that in yet another province the old customs of Norse faith have spread like a wildfire. The priests demand us to act quickly as such a situation might quickly get out of control and become gravely dangerous."
+    RE_Norse_Events.2.a: "It's truly worrying"
+    
+    RE_Norse_Events.4.t: "Hail to Odin!"
+    RE_Norse_Events.4.d: "The preachers of the Norse faith encouraged by the recent events have woken up from their slumber. Armed in whatever they could find, they have emerged from hidden places and flocked under the raven banner of Odin, hailing in his name. The word of rebellion quickly spreads through the country, encouraging even more people to join in. Rebels have only one demand, as it seems - to recognize their never really forgotten customs as a true and only one religion of state!"
+    RE_Norse_Events.4.a: "We are doomed to fall!"
+    
+    RE_Norse_Events.5.t: "Spread Faith?"
+    RE_Norse_Events.5.d: "Since we have re-embraced the Norse faith there have been constant pressure on us to spread our beliefs aboard. Many of true believers and sorcerers speak that we can no longer tolerate unbelievers passively. They say, Christians were not so kind to us as they should have been according to their holy book and thus there is no guarantee they would not attack us again, trying to wipe out our beliefs. We must learn from our mistakes and act first! Yet, there will always be consequences."
+    RE_Norse_Events.5.a: "Let the words spread!"
+    RE_Norse_Events.5.b: "We can't provoke them..."
+    
+    RE_Norse_Events.6.t: "Norse Heathens?"
+    RE_Norse_Events.6.d: "The word has reached you that there are some weird people from nearby [From.GetName] travelling countryside, spreading truly weird words about Odin and Norse faith. Due to fear or simply belief, some of peasants and other \"lower people\" are willing to hear the call."
+    RE_Norse_Events.6.a: "What?! We have to punish the infidels!"
