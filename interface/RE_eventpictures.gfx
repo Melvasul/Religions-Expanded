@@ -1,0 +1,140 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "RE_NORSE_DUEL_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_DISABLOT_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_DISABLOT_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_DUEL_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_DYING_WITH_SWORD_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_DYING_WITH_SWORD_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_ODIN_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_ODIN_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_PLUNDER_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_PLUNDER_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_PYRE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_PYRE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_RAVEN_MOON_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_RAVEN_MOON_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_RAVENS_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_RAVENS_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_RUNESTONE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_RUNESTONE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_SACRIFICE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SACRIFICE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_SACRIFICE2_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SACRIFICE2_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_SEER_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SEER_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_SHIELDWALL_PREPARATION_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SHIELDWALL_PREPARATION_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_SHIELDWALL_TURTLE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SHIELDWALL_TURTLE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_SWORD_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SWORD_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_THE_GATES_OF_VALHALLA_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_THE_GATES_OF_VALHALLA_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_THE_GATES_OF_VALHALLA2_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_THE_GATES_OF_VALHALLA2_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_THOR_IS_WORTHY_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_THOR_IS_WORTHY_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_VIKING_AFTER_BATTLE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_VIKING_AFTER_BATTLE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_VIKINGER_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_VIKINGER_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_VIKINGS_CHARGE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_VIKINGS_CHARGE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "RE_NORSE_VIKINGS_ON_A_LANGSKIP_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_VIKINGS_ON_A_LANGSKIP_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "RE_NORSE_WARLORD_CRY_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_WARLORD_CRY_eventPicture.dds"
+		allwaystransparent = yes
+	}
+}

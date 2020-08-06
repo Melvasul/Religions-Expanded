@@ -1,16 +1,38 @@
 ﻿l_english:
+    #MODIFIERS
+    RE_Norse_something_bad_is_to_happen: "Something Bad is to Happen"
+    RE_Norse_lost_in_omens: "Lost in Omens"
+    RE_Norse_encouraged_by_omens: "Encouraged by Omens"
+    RE_Norse_what_must_be_done: "What Must be Done"
+    RE_Norse_stray_indecisively: "Stray Indecisively"
+    RE_Norse_gods_chosen_one: "Gods' Chosen One"
+    RE_Norse_despised_by_gods: "Despised by Gods"
+    RE_Norse_ruler_gone_to_valhalla: "Ruler Gone to Valhalla"
+    RE_Norse_ruler_gone_to_niflheim: "Ruler Gone to Niflheim"
+    RE_Norse_unaccepted_infidels: "Unaccepted Infidels"
+    RE_Norse_accepted_infidels: "Accepted Infidels"
+
+    #OPINIONS
+    RE_Norse_viking_raid: "Viking Raid"
+
+    #EVENTS
     RE_Norse_Events.1.t: "Where are the Ice Giants?"
     RE_Norse_Events.1.d: "Pray for your soul to be saved, they say, as you are a sinner since the day you are born. Otherwise, the fires of hell shall consume your flesh and devils shall dance upon you, picking you with their sharpen forks. The very same thing happens when you do not obey to priests' demands. Of course.\n\nMeanwhile, Odin just simply promised to kill all ice giants.\nThe question is quite simple: have you seen any ice giant recently?"
     RE_Norse_Events.1.a: "No ice giants anywhere to be seen! Hail Odin!"
     RE_Norse_Events.1.b: "I want priests to have my gold, my daughters, my soul and whatever else they want..."
     
     RE_Norse_Events.2.t: "Flock is Gathering"
-    RE_Norse_Events.2.d: "The news is that in yet another province the old customs of Norse faith have spread like a wildfire. The priests demand us to act quickly as such a situation might quickly get out of control and become gravely dangerous."
-    RE_Norse_Events.2.a: "It's truly worrying"
+    RE_Norse_Events.2.d: "The news is that the believers of Norse faith's old customs are rising in numbers and their influence is spreading like a wildfire. If we want to stop them, we must act swiftly as such a situation, left unsettled might quickly get out of control and become gravely dangerous."
+    RE_Norse_Events.2.a: "We must stop them!"
+    RE_Norse_Events.2.a: "Let them grow..."
     
     RE_Norse_Events.4.t: "Hail to Odin!"
     RE_Norse_Events.4.d: "The preachers of the Norse faith encouraged by the recent events have woken up from their slumber. Armed in whatever they could find, they have emerged from hidden places and flocked under the raven banner of Odin, hailing in his name. The word of rebellion quickly spreads through the country, encouraging even more people to join in. Rebels have only one demand, as it seems - to recognize their never really forgotten customs as a true and only one religion of state!"
     RE_Norse_Events.4.a: "We are doomed to fall!"
+    
+    RE_Norse_Events.3.t: "Clear infection flags"
+    RE_Norse_Events.3.d: "Clear infection flags"
+    RE_Norse_Events.3.a: "Clear infection flags"
     
     RE_Norse_Events.5.t: "Spread Faith?"
     RE_Norse_Events.5.d: "Since we have re-embraced the Norse faith there have been constant pressure on us to spread our beliefs aboard. Many of true believers and sorcerers speak that we can no longer tolerate unbelievers passively. They say, Christians were not so kind to us as they should have been according to their holy book and thus there is no guarantee they would not attack us again, trying to wipe out our beliefs. We must learn from our mistakes and act first! Yet, there will always be consequences."
@@ -20,3 +42,65 @@
     RE_Norse_Events.6.t: "Norse Heathens?"
     RE_Norse_Events.6.d: "The word has reached you that there are some weird people from nearby [From.GetName] travelling countryside, spreading truly weird words about Odin and Norse faith. Due to fear or simply belief, some of peasants and other \"lower people\" are willing to hear the call."
     RE_Norse_Events.6.a: "What?! We have to punish the infidels!"
+    
+    RE_Norse_Events.7.t: "Go Viking?"
+    RE_Norse_Events.7.d: "In the years passed our ancestors were constantly invading neighbour lands for loot in gold and slaves. Many of our people view this act as something more than just a custom but rather as a natural way of how the world works - if you lack something then you go and take it from someone who has it in plenty (or just has it at all). No wonder why they are so willing to take their sword, axes and go for plunder. Of course this will give our neighbours a valid cause to take a revenge on us."
+    RE_Norse_Events.7.a: "Hah! As long as I can get my share!"
+    RE_Norse_Events.7.a.tooltip1: "We will raid §Y[This.GetName]§!!"
+    RE_Norse_Events.7.b: "No, I don't think so..."
+    
+    RE_Norse_Events.8.t: "Viking Raid!"
+    RE_Norse_Events.8.d: "These murderous beasts from [From.GetName] just crossed the border out of nowhere and started to plunder! They have taken whatever they wanted, whoever they could enslave and then raped, killed or burned anything else. Now only white embers glows amidst the ruins and the cries of our fallen fill the sky."
+    RE_Norse_Events.8.a: "Damn them! I shall have my revenge!"
+    
+    RE_Norse_Events.9.t: "The Seer"
+    RE_Norse_Events.9.d: "In the eve of your march to the war, the Seer approaches and offers casting rune sticks to foretell your fate. You may agree and take a look in the upcoming future but be aware as Seers almost always speak in riddles. Should gods favour you, great things might be revealed and come to your aid but if you are not gods' favourite then you invite your doom!"
+    RE_Norse_Events.9.a: "Let the veil be revealed..."
+    RE_Norse_Events.9.b: "No, definitely not!"
+    
+    RE_Norse_Events.10.t: "Prophecy"
+    RE_Norse_Events.10.d: "The Seer takes the rune sticks in his hands then cast them broadly, letting the sticks rattle on the ground. Then he leans towards them and after a long while during which he only stays still and looks, he begins to speak..."
+    RE_Norse_Events.10.a: "And the truth is revealed!"
+    RE_Norse_Events.10.a.tooltip1: "You are completely unable to decipher his riddles, damn!"
+    RE_Norse_Events.10.a.tooltip2: "You feel wiser as you march towards the war."
+    RE_Norse_Events.10.a.tooltip3: "You are almost sure there is something bad to happen..."
+    RE_Norse_Events.10.a.tooltip4: "Omens, omens everywhere! You are lost!"
+    RE_Norse_Events.10.a.tooltip5: "Omens, omens everywhere! You are encouraged!"
+    RE_Norse_Events.10.a.tooltip6: "Now you know exactly what must be done!"
+    RE_Norse_Events.10.a.tooltip7: "What to do? What to do? You stray indecisively..."
+    RE_Norse_Events.10.a.tooltip8: "You are the Gods' chosen one!"
+    RE_Norse_Events.10.a.tooltip9: "Gods ignore you and maybe even despise you? Doom surely awaits..."
+    RE_Norse_Events.10.a.tooltip10: "You shall gain victory by your death, fear not!"
+    RE_Norse_Events.10.a.tooltip11: "Oh no, oh no, you are going to die!"
+    
+    RE_Norse_Events.11.t: "Clear flag RE_Norse_seer_runesticks"
+    RE_Norse_Events.11.d: "Clear flag RE_Norse_seer_runesticks"
+    RE_Norse_Events.11.a: "Clear flag RE_Norse_seer_runesticks"
+    RE_Norse_Events.11.b: "Set flag RE_Norse_agreed_to_cast_rune_sticks"
+    RE_Norse_Events.11.c: "Set flag RE_Norse_refused_to_cast_rune_sticks"
+    RE_Norse_Events.11.d: "Clear above two flags"
+    
+    RE_Norse_Events.12.t: "Prophesied Death"
+    RE_Norse_Events.12.d1: "The Seer prophesied your death by casting his rune sticks. You remember his words filling your ears and you also remember that moment of silent disbelief. You never really planned to die as you always wished to live forever. Yet, there was a reward promised and thus no fear holds you when a ghastly cold embraces your body and your mind goes blank as if a milky haze covered the whole visible world. Then there is a moment of tension; the only one last heartbeat to feel, the feeling of numbness wandering straight down your spine, the coldness of sword hilt, the smell of the air around you, the tingles beneath your skin and just then, the complete, pervasive feeling of emptiness. Farewell, my friend."
+    RE_Norse_Events.12.d2: "The Seer prophesied your death by casting his rune sticks. You remember his words filling your ears and you also remember that moment of silent disbelief. You never really planned to die as you always wished to live forever. But here you are; alone, dying and terrified. You don't want to die! Not yet! You are stretching your hand around, blindly looking for a hilt of sword - the last comfort in your situation. You must grasp it! Otherwise, otherwise... where is it? Where is your sword, you ask yourself as no familiar coldness of hilt comforts your mind. You feel everything but that feeling of steel in a hand. And suddenly it is, the coldness. The feeling of dread and despair, everything you ever wanted to avoid. Everything you always feared. You are doomed!"
+    RE_Norse_Events.12.a: "[RE_Norse_prophesied_death]"
+    string_RE_Norse_victory_by_death: "Valhalla awaits!"
+    string_RE_Norse_doomed_to_die: "Embrace the eternal cold of Hel..."
+    
+    RE_Norse_Events.13.t: "Madman?"
+    RE_Norse_Events.13.d1: "Some old man approached you when you were strolling through your domain. At first you were alarmed as you were almost sure he should not be able to get there! Yet, something told you to hold your horses and you calmed down. The man, as it seemed, was pleasant, not dangerous and when he spoke you were completely unable to understand what he was about! Surely a madman, no doubts! Only later in the night you remembered his words and found a great advice in them how to make things work better! What a weird situation it was..."
+    RE_Norse_Events.13.d2: "Some old man approached you when you were strolling through your domain. At first you were alarmed as you were almost sure he should not be able to get there! Yet, something told you to hold your horses and you calmed down. The man, as it seemed, was pleasant, not dangerous and when he spoke you were completely unable to understand what he was about! Surely a madman, no doubts! Only later in the night you remembered his words and found an insult in them that filled you with overwhelming sense of dread and despair as if something actually bad was going to happen to your country! What a weird situation it was..."
+    RE_Norse_Events.13.a: "[RE_Norse_visit_from_odin]"
+    string_RE_Norse_agreed_to_cast_rune_sticks: "Truly marvellous!"
+    string_RE_Norse_refused_to_cast_rune_sticks: "I must punish the guards..."
+    
+    RE_Norse_Events.14.t: "The Question of Strength"
+    RE_Norse_Events.14.d1: "It happens that some of infidels living among us still dare to question the strength of our gods! They say that only their belief is true, valid and any other is just believing in false idols and thus in their opinion we are gonna be destroyed sooner or later because our gods have no power or just do not simply exist at all. Your people demand you to do something about these blasphemers to show them their place."
+    RE_Norse_Events.14.a: "That can't be! Sacrifice them to our gods!"
+    RE_Norse_Events.14.b: "What if they are right? We don't wanna anger their gods..."
+    RE_Norse_Events.14.c: "Let them speak, it doesn't matter at all!"
+    
+    RE_Norse_Events.100.t: "Set Flag"
+    RE_Norse_Events.100.d: "Set Flag"
+    RE_Norse_Events.100.a: "RE_Norse_victory_by_death"
+    RE_Norse_Events.100.b: "RE_Norse_doomed_to_die"

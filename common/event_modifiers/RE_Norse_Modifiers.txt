@@ -1,0 +1,56 @@
+RE_Norse_something_bad_is_to_happen = {
+	land_morale = -0.05
+	discipline = -0.025
+}
+
+RE_Norse_lost_in_omens = {
+	all_power_cost = 0.025
+	movement_speed = -0.05
+}
+
+RE_Norse_encouraged_by_omens = {
+	land_morale = 0.05
+	shock_damage = 0.05
+	shock_damage_received = -0.05
+}
+
+RE_Norse_what_must_be_done = {
+	all_power_cost = -0.05
+}
+
+RE_Norse_stray_indecisively = {
+	movement_speed = -0.2
+	land_morale = -0.05
+}
+
+RE_Norse_gods_chosen_one = {
+	prestige = 1
+	land_morale = 0.1
+	discipline = 0.025
+}
+
+RE_Norse_despised_by_gods = {
+	prestige = -1
+	land_morale = -0.1
+	discipline = -0.025
+}
+
+RE_Norse_ruler_gone_to_valhalla = {
+	prestige = 1
+	tolerance_own = 2
+}
+
+RE_Norse_ruler_gone_to_niflheim = {
+	prestige = -1
+	tolerance_own = -2
+}
+
+RE_Norse_unaccepted_infidels = {
+	global_missionary_strength = 2
+	tolerance_heathen = -2
+}
+
+RE_Norse_accepted_infidels = {
+	tolerance_heathen = 4
+	tolerance_own = -2
+}

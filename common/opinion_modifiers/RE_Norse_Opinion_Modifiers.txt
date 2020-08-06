@@ -1,0 +1,4 @@
+RE_Norse_viking_raid = {
+	opinion = -50
+	yearly_decay = -2
+}

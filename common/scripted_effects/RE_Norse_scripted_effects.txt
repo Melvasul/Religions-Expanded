@@ -1,0 +1,35 @@
+RE_Norse_spread_norse_faith = {
+	change_religion = norse_pagan_reformed
+	clr_province_flag = RE_Norse_current_infected
+	if = {
+		limit = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+			}
+		}
+		every_neighbor_province = {
+			limit = {
+				owned_by = ROOT
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+			}
+			set_province_flag = RE_Norse_current_infected
+		}
+	}
+	else = {
+		owner = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						religion = norse_pagan_reformed
+					}
+				}
+				set_province_flag = RE_Norse_current_infected
+			}
+		}
+	}
+}
