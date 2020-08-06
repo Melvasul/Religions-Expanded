@@ -11,6 +11,8 @@
     RE_Norse_ruler_gone_to_niflheim: "Ruler Gone to Niflheim"
     RE_Norse_unaccepted_infidels: "Unaccepted Infidels"
     RE_Norse_accepted_infidels: "Accepted Infidels"
+    RE_Norse_we_are_worthy: "We Are Worthy!"
+    RE_Norse_raided_province: "Plundered Province"
 
     #OPINIONS
     RE_Norse_viking_raid: "Viking Raid"
@@ -47,11 +49,13 @@
     RE_Norse_Events.7.d: "In the years passed our ancestors were constantly invading neighbour lands for loot in gold and slaves. Many of our people view this act as something more than just a custom but rather as a natural way of how the world works - if you lack something then you go and take it from someone who has it in plenty (or just has it at all). No wonder why they are so willing to take their sword, axes and go for plunder. Of course this will give our neighbours a valid cause to take a revenge on us."
     RE_Norse_Events.7.a: "Hah! As long as I can get my share!"
     RE_Norse_Events.7.a.tooltip1: "We will raid §Y[This.GetName]§!!"
+    RE_Norse_Events.7.a.tooltip2: "§Y[This.GetName]§! will be plundered for another §Y10§! years."
     RE_Norse_Events.7.b: "No, I don't think so..."
     
     RE_Norse_Events.8.t: "Viking Raid!"
     RE_Norse_Events.8.d: "These murderous beasts from [From.GetName] just crossed the border out of nowhere and started to plunder! They have taken whatever they wanted, whoever they could enslave and then raped, killed or burned anything else. Now only white embers glows amidst the ruins and the cries of our fallen fill the sky."
     RE_Norse_Events.8.a: "Damn them! I shall have my revenge!"
+    RE_Norse_Events.8.a.tooltip1: "§Y[This.GetName]§! will be plundered for another §Y10§! years."
     
     RE_Norse_Events.9.t: "The Seer"
     RE_Norse_Events.9.d: "In the eve of your march to the war, the Seer approaches and offers casting rune sticks to foretell your fate. You may agree and take a look in the upcoming future but be aware as Seers almost always speak in riddles. Should gods favour you, great things might be revealed and come to your aid but if you are not gods' favourite then you invite your doom!"
@@ -87,7 +91,7 @@
     string_RE_Norse_victory_by_death: "Valhalla awaits!"
     string_RE_Norse_doomed_to_die: "Embrace the eternal cold of Hel..."
     
-    RE_Norse_Events.13.t: "Madman?"
+    RE_Norse_Events.13.t: "A Madman?"
     RE_Norse_Events.13.d1: "Some old man approached you when you were strolling through your domain. At first you were alarmed as you were almost sure he should not be able to get there! Yet, something told you to hold your horses and you calmed down. The man, as it seemed, was pleasant, not dangerous and when he spoke you were completely unable to understand what he was about! Surely a madman, no doubts! Only later in the night you remembered his words and found a great advice in them how to make things work better! What a weird situation it was..."
     RE_Norse_Events.13.d2: "Some old man approached you when you were strolling through your domain. At first you were alarmed as you were almost sure he should not be able to get there! Yet, something told you to hold your horses and you calmed down. The man, as it seemed, was pleasant, not dangerous and when he spoke you were completely unable to understand what he was about! Surely a madman, no doubts! Only later in the night you remembered his words and found an insult in them that filled you with overwhelming sense of dread and despair as if something actually bad was going to happen to your country! What a weird situation it was..."
     RE_Norse_Events.13.a: "[RE_Norse_visit_from_odin]"
@@ -95,10 +99,14 @@
     string_RE_Norse_refused_to_cast_rune_sticks: "I must punish the guards..."
     
     RE_Norse_Events.14.t: "The Question of Strength"
-    RE_Norse_Events.14.d1: "It happens that some of infidels living among us still dare to question the strength of our gods! They say that only their belief is true, valid and any other is just believing in false idols and thus in their opinion we are gonna be destroyed sooner or later because our gods have no power or just do not simply exist at all. Your people demand you to do something about these blasphemers to show them their place."
+    RE_Norse_Events.14.d: "It happens that some of infidels living among us still dare to question the strength of our gods! They say that only their belief is true, valid and any other is just believing in false idols and thus in their opinion we are gonna be destroyed sooner or later because our gods have no power or just do not simply exist at all. Your people demand you to do something about these blasphemers to show them their place."
     RE_Norse_Events.14.a: "That can't be! Sacrifice them to our gods!"
     RE_Norse_Events.14.b: "What if they are right? We don't wanna anger their gods..."
     RE_Norse_Events.14.c: "Let them speak, it doesn't matter at all!"
+    
+    RE_Norse_Events.15.t: "We Are Worthy!"
+    RE_Norse_Events.15.d: "The sky is moving lazily above your head, rumbling low with cracks of lightnings that fill the view. You feel the familiar tension in the air, the feeling of heavy, yet refreshing touch as if something was about to happen. The flesh beneath your skin tingles and hairs stand still on your nape. The Thunderer is travelling through the sky, laughing in joy!"
+    RE_Norse_Events.15.a: "All hail Thor Odinson, protector of mankind!"
     
     RE_Norse_Events.100.t: "Set Flag"
     RE_Norse_Events.100.d: "Set Flag"

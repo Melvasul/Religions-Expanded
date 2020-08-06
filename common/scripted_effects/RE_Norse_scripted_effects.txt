@@ -32,4 +32,8 @@ RE_Norse_spread_norse_faith = {
 			}
 		}
 	}
+	add_province_modifier = {
+		name = religious_zeal_at_conv
+		duration = 3650
+	}
 }

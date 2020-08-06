@@ -46,11 +46,21 @@ RE_Norse_ruler_gone_to_niflheim = {
 }
 
 RE_Norse_unaccepted_infidels = {
-	global_missionary_strength = 2
+	global_missionary_strength = 0.02
 	tolerance_heathen = -2
 }
 
 RE_Norse_accepted_infidels = {
 	tolerance_heathen = 4
 	tolerance_own = -2
+}
+
+RE_Norse_we_are_worthy = {
+	land_morale = 0.1
+	infantry_shock = 1
+}
+
+RE_Norse_plundered_province = {
+	local_unrest = 1
+	local_development_cost = 0.25
 }
