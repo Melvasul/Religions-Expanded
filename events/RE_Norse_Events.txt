@@ -36,9 +36,6 @@ province_event = {
 	desc = RE_Norse_Events.2.d
 	picture = RE_NORSE_RAVENS_eventPicture
 	goto = ROOT
-	mean_time_to_happen = {
-		months = 60
-	}
 	trigger = {
 		OR = {
 			AND = {
@@ -50,6 +47,9 @@ province_event = {
 			has_province_flag = RE_Norse_current_infected
 		}
 	}
+	mean_time_to_happen = {
+		months = 90
+	}
 	option = {
 		name = RE_Norse_Events.2.a
 		RE_Norse_spread_norse_faith = yes
@@ -58,7 +58,7 @@ province_event = {
 		ai_chance = {
 			factor = 1
 		}
-		name = RE_Norse_Events.2.a
+		name = RE_Norse_Events.2.b
 		set_province_flag = RE_Norse_previous_infected
 		RE_Norse_spread_norse_faith = yes
 	}
@@ -91,9 +91,6 @@ country_event = {
 	}
 	option = {
 		name = RE_Norse_Events.3.a
-		ai_chance = {
-			factor = 1
-		}
 	}
 }
 
@@ -110,24 +107,19 @@ province_event = {
 				religion = norse_pagan_reformed
 			}
 		}
-		NOT = {
-			has_rebel_faction = norse_pagan_reformed_rebels
+		owner = {
+			NOT = {
+				has_spawned_rebels = norse_pagan_reformed_rebels
+			}
 		}
 		religion = norse_pagan_reformed
 	}
 	mean_time_to_happen = {
-		months = 60
+		months = 90
 	}
 	option = {
-		goto = ROOT
 		name = RE_Norse_Events.4.a
-		norse_pagan_reformed_rebels = 2
-		random_neighbor_province = {
-			limit = {
-				owned_by = ROOT
-			}
-			norse_pagan_reformed_rebels = 1
-		}
+		norse_pagan_reformed_rebels = 3
 	}
 }
 
@@ -136,17 +128,19 @@ country_event = {
 	id = RE_Norse_Events.5
 	title = RE_Norse_Events.5.t
 	desc = RE_Norse_Events.5.d
-	picture = RE_NORSE_SACRIFICE2_eventPicture
+	picture = RE_NORSE_LOOKING_AHEAD_eventPicture
 	trigger = {
 		religion = norse_pagan_reformed
-		all_owned_province = {
+		any_province = {
+			is_wasteland = no
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				owned_by = ROOT
+			}
 			any_neighbor_province = {
-				NOT = {
-					religion = norse_pagan_reformed
-				}
-				NOT = {
-					owned_by = ROOT
-				}
+				owned_by = ROOT
 			}
 		}
 	}
@@ -158,26 +152,26 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		random_neighbor_country = {
-			random_owned_province = {
-				limit = {
-					any_neighbor_province = {
-						owned_by = ROOT
-					}
-					NOT = {
-						religion = norse_pagan_reformed
-					}
+		random_province = {
+			limit = {
+				is_wasteland = no
+				NOT = {
+					religion = norse_pagan_reformed
 				}
-				change_religion = norse_pagan_reformed
-				add_province_modifier = {
-					name = religious_zeal_at_conv
-					duration = 3650
+				NOT = {
+					owned_by = ROOT
 				}
-				owner = {
-					country_event = {
-						id = RE_Norse_Events.6
-					}
+				any_neighbor_province = {
+					owned_by = ROOT
 				}
+			}
+			change_religion = norse_pagan_reformed
+			add_province_modifier = {
+				name = religious_zeal_at_conv
+				duration = 3650
+			}
+			province_event = {
+				id = RE_Norse_Events.6
 			}
 		}
 		add_prestige = 5
@@ -197,34 +191,44 @@ country_event = {
 }
 
 #Spreading Norse Faith
-country_event = {
+province_event = {
 	id = RE_Norse_Events.6
 	title = RE_Norse_Events.6.t
 	desc = RE_Norse_Events.6.d
 	picture = RE_NORSE_RAVEN_MOON_eventPicture
+	goto = ROOT
 	is_triggered_only = yes
 	option = {
 		name = RE_Norse_Events.6.a
-		add_prestige = -5
-		add_opinion = {
-			who = FROM
-			modifier = RE_Norse_proselyting_negative
-		}
-		add_casus_belli = {
-			type = cb_border_war
-			target = FROM
+		owner = {
+			add_prestige = -5
+			add_opinion = {
+				who = FROM
+				modifier = RE_Norse_proselyting_negative
+			}
+			add_casus_belli = {
+				type = cb_border_war
+				target = FROM
+			}
 		}
 	}
 	option = {
 		name = RE_Norse_Events.6.b
 		highlight = yes
-		trigger = {
-			religion = norse_pagan_reformed
+		ai_chance = {
+			factor = 1
 		}
-		add_adm_power = 50
-		add_opinion = {
-			who = FROM
-			modifier = RE_Norse_proselyting_positive
+		trigger = {
+			owner = {
+				religion = norse_pagan_reformed
+			}
+		}
+		owner = {
+			add_adm_power = 50
+			add_opinion = {
+				who = FROM
+				modifier = RE_Norse_proselyting_positive
+			}
 		}
 	}
 }
@@ -256,14 +260,23 @@ country_event = {
 				NOT = {
 					has_province_modifier = RE_Norse_plundered_province
 				}
+				NOT = {
+					has_province_flag = RE_Norse_currently_being_plundered
+				}
+				OR = {
+					base_tax = 1
+					base_production = 1
+					base_manpower = 1
+				}
 			}
 		}
 	}
 	mean_time_to_happen = {
-		months = 60
+		months = 90
 	}
 	option = {
 		name = RE_Norse_Events.7.a
+		add_yearly_manpower = -0.1
 		random_neighbor_country = {
 			limit = {
 				NOT = {
@@ -279,54 +292,30 @@ country_event = {
 				}
 			}
 			custom_tooltip = RE_Norse_Events.7.a.tooltip1
-			tooltip = {
-				add_casus_belli = {
-					type = cb_border_war
-					target = ROOT
-				}
-			}
 			random_owned_province = {
 				limit = {
 					any_neighbor_province = {
 						owned_by = ROOT
 					}
+					NOT = {
+						has_province_modifier = RE_Norse_plundered_province
+					}
+					OR = {
+						base_tax = 1
+						base_production = 1
+						base_manpower = 1
+					}
 				}
-				save_event_target_as = RE_Norse_current_plundered_province
-				custom_tooltip = RE_Norse_Events.7.a.tooltip2
-				add_devastation = 10
 				hidden_effect = {
-					add_province_modifier = {
-						name = RE_Norse_plundered_province
-						duration = 3650
+					set_province_flag = RE_Norse_currently_being_plundered
+					province_event = {
+						id = RE_Norse_Events.8
+						days = 90
+						random = 90
 					}
 				}
+				custom_tooltip = RE_Norse_Events.7.a.tooltip2
 			}
-			hidden_effect = {
-				add_years_of_income = -0.1
-				add_yearly_manpower = -0.1
-				if = {
-					limit = {
-						event_target:RE_Norse_current_plundered_province = {
-							has_port = yes
-						}
-					}
-					add_yearly_sailors = -0.1
-				}
-				country_event = {
-					id = RE_Norse_Events.8
-				}
-			}
-		}
-		add_prestige = 5
-		add_years_of_income = 0.1
-		add_yearly_manpower = 0.1
-		if = {
-			limit = {
-				event_target:RE_Norse_current_plundered_province = {
-					has_port = yes
-				}
-			}
-			add_yearly_sailors = 0.1
 		}
 	}
 	option = {
@@ -336,37 +325,127 @@ country_event = {
 }
 
 #Viking raid!
-country_event = {
+province_event = {
 	id = RE_Norse_Events.8
 	title = RE_Norse_Events.8.t
 	desc = RE_Norse_Events.8.d
-	picture = RE_NORSE_PLUNDER_eventPicture
+	picture = RE_NORSE_BURNING_VILLAGE_eventPicture
+	goto = ROOT
 	is_triggered_only = yes
 	option = {
-		tooltip = {
-			event_target:RE_Norse_current_plundered_province = {
-				custom_tooltip = RE_Norse_Events.8.a.tooltip1
-				add_devastation = 10
-			}
-			add_years_of_income = -0.1
-			add_yearly_manpower = -0.1
-			if = {
-				limit = {
-					event_target:RE_Norse_current_plundered_province = {
-						has_port = yes
+		name = RE_Norse_Events.8.a
+		add_devastation = 10
+		custom_tooltip = RE_Norse_Events.8.a.tooltip1
+		hidden_effect = {
+			random_list = {
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							base_tax = 1
+						}
+					}
+					add_base_tax = -1
+					FROM = {
+						set_country_flag = RE_Norse_looted_tax
 					}
 				}
-				add_yearly_sailors = -0.1
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							base_production = 1
+						}
+					}
+					add_base_production = -1
+					FROM = {
+						set_country_flag = RE_Norse_looted_production
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							base_manpower = 1
+						}
+					}
+					add_base_manpower = -1
+					FROM = {
+						set_country_flag = RE_Norse_looted_manpower
+					}
+				}
 			}
 		}
-		name = RE_Norse_Events.8.a
-		add_opinion = {
-			who = FROM
-			modifier = RE_Norse_viking_raid
+		add_province_modifier = {
+			name = RE_Norse_plundered_province
+			duration = 3650
 		}
-		add_casus_belli = {
-			type = cb_border_war
-			target = FROM
+		owner = {
+			add_casus_belli = {
+				type = cb_border_war
+				target = FROM
+			}
+			add_opinion = {
+				who = FROM
+				modifier = RE_Norse_viking_raid
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = RE_Norse_Events.20
+					days = 90
+					random = 90
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			clr_province_flag = RE_Norse_currently_being_plundered
+		}
+	}
+}
+
+#Vikings Return
+country_event = {
+	id = RE_Norse_Events.20
+	title = RE_Norse_Events.20.t
+	desc = RE_Norse_Events.20.d
+	picture = RE_NORSE_VIKINGS_CHARGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = RE_Norse_Events.20.a
+		add_prestige = 10
+		add_years_of_income = 0.25
+		random_owned_province = {
+			limit = {
+				same_continent = capital
+			}
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = RE_Norse_looted_tax
+					}
+				}
+				add_base_tax = 1
+			}
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = RE_Norse_looted_production
+					}
+				}
+				add_base_production = 1
+			}
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = RE_Norse_looted_manpower
+					}
+				}
+				add_base_manpower = 1
+			}
 		}
 	}
 }
@@ -380,6 +459,7 @@ country_event = {
 	trigger = {
 		religion = norse_pagan_reformed
 		is_at_war = yes
+		is_lesser_in_union = no
 		has_consort_regency = no
 		has_regency = no
 		NOT = {
@@ -394,287 +474,71 @@ country_event = {
 		set_country_flag = RE_Norse_seer_runesticks
 		set_country_flag = RE_Norse_agreed_to_cast_rune_sticks
 		#hidden_effect = {
-			random_list = {
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect1
-					#You are completely unable to decipher his riddles, damn!
-					modifier = {
-						factor = 2
-						OR = {
-							NOT = { adm = 2 }
-							NOT = { dip = 2 }
-							NOT = { mil = 2 }
-						}
-					}
-					modifier = {
-						factor = 2.5
-						OR = {
-							NOT = { adm = 1 }
-							NOT = { dip = 1 }
-							NOT = { mil = 1 }
-						}
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect2
-					#You feel wiser as you march towards the war.
-					modifier = {
-						factor = 1.5
-						OR = {
-							adm = 3
-							dip = 3
-							mil = 3
-						}
-					}
-					modifier = {
-						factor = 2
-						OR = {
-							adm = 5
-							dip = 5
-							mil = 5
-						}
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect3
-					#You are almost sure there is something bad to happen...
-					modifier = {
-						factor = 0.5
-						stability = 1
-					}
-					modifier = {
-						factor = 1.5
-						NOT = { stability = 0 }
-					}
-					modifier = {
-						factor = 2
-						NOT = { stability = -1 }
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect4
-					#Omens, omens everywhere! You are lost!
-					modifier = {
-						factor = 1.5
-						OR = {
-							NOT = { adm = 2 }
-							NOT = { dip = 2 }
-							NOT = { mil = 2 }
-						}
-					}
-					modifier = {
-						factor = 2
-						OR = {
-							NOT = { adm = 1 }
-							NOT = { dip = 1 }
-							NOT = { mil = 1 }
-						}
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect5
-					#Omens, omens everywhere! You are encouraged!
-					modifier = {
-						factor = 1.25
-						OR = {
-							adm = 3
-							dip = 3
-							mil = 3
-						}
-					}
-					modifier = {
-						factor = 1.5
-						OR = {
-							adm = 4
-							dip = 4
-							mil = 4
-						}
-					}
-					modifier = {
-						factor = 2
-						OR = {
-							adm = 5
-							dip = 5
-							mil = 5
-						}
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect6
-					#Now you know exactly what must be done!
-					modifier = {
-						factor = 1
-						OR = {
-							adm = 3
-							dip = 3
-							mil = 3
-						}
-					}
-					modifier = {
-						factor = 1.5
-						OR = {
-							adm = 5
-							dip = 5
-							mil = 5
-						}
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect7
-					#What to do? What to do? You stray indecisively...
-					modifier = {
-						factor = 1.25
-						OR = {
-							NOT = { adm = 2 }
-							NOT = { dip = 2 }
-							NOT = { mil = 2 }
-						}
-					}
-					modifier = {
-						factor = 1.5
-						OR = {
-							NOT = { adm = 1 }
-							NOT = { dip = 1 }
-							NOT = { mil = 1 }
-						}
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect8
-					#You are the Gods' chosen one!
-					modifier = {
-						factor = 1.25
-						OR = {
-							adm = 4
-							dip = 4
-							mil = 4
-						}
-					}
-					modifier = {
-						factor = 2
-						OR = {
-							adm = 5
-							dip = 5
-							mil = 5
-						}
-					}
-					modifier = {
-						factor = 1.025
-						prestige = 50
-					}
-					modifier = {
-						factor = 1.05
-						prestige = 75
-					}
-					modifier = {
-						factor = 1.1
-						prestige = 100
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect9
-					#Gods ignore you and maybe even despise you? Doom surely awaits...
-					modifier = {
-						factor = 1.25
-						OR = {
-							NOT = { adm = 2 }
-							NOT = { dip = 2 }
-							NOT = { mil = 2 }
-						}
-					}
-					modifier = {
-						factor = 1.5
-						OR = {
-							NOT = { adm = 1 }
-							NOT = { dip = 1 }
-							NOT = { mil = 1 }
-						}
-					}
-					modifier = {
-						factor = 1.025
-						NOT = { prestige = 25 }
-					}
-					modifier = {
-						factor = 1.05
-						NOT = { prestige = 10 }
-					}
-					modifier = {
-						factor = 1.1
-						NOT = { prestige = 0 }
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect10
-					#You shall gain victory by your death, fear not!
-					modifier = {
-						factor = 0.01
-						OR = {
-							has_ruler_flag = RE_Norse_victory_by_death
-							has_ruler_flag = RE_Norse_doomed_to_die
-						}
-					}
-					modifier = {
-						factor = 1.5
-						AND = {
-							ruler_age = 40
-							OR = {
-								adm = 3
-								dip = 3
-								mil = 3
-							}
-						}
-					}
-					modifier = {
-						factor = 2
-						AND = {
-							ruler_age = 50
-							OR = {
-								adm = 3
-								dip = 3
-								mil = 3
-							}
-						}
-					}
-				}
-				1 = {
-					set_country_flag = RE_Norse_runesticks_effect11
-					#Oh no, oh no, you are going to die!
-					modifier = {
-						factor = 0.01
-						OR = {
-							has_ruler_flag = RE_Norse_victory_by_death
-							has_ruler_flag = RE_Norse_doomed_to_die
-						}
-					}
-					modifier = {
-						factor = 1.5
-						AND = {
-							ruler_age = 40
-							OR = {
-								NOT = { adm = 1 }
-								NOT = { dip = 1 }
-								NOT = { mil = 1 }
-							}
-						}
-					}
-					modifier = {
-						factor = 2
-						AND = {
-							ruler_age = 50
-							OR = {
-								NOT = { adm = 1 }
-								NOT = { dip = 1 }
-								NOT = { mil = 1 }
-							}
-						}
+		random_list = {
+			2 = {
+				set_country_flag = RE_Norse_runesticks_effect1
+				#You are completely unable to decipher his riddles, damn!
+			}
+			2 = {
+				set_country_flag = RE_Norse_runesticks_effect2
+				#You feel wiser as you march towards the war.
+			}
+			1 = {
+				set_country_flag = RE_Norse_runesticks_effect3
+				#You are almost sure there is something bad to happen...
+			}
+			1 = {
+				set_country_flag = RE_Norse_runesticks_effect4
+				#Omens, omens everywhere! You are lost!
+			}
+			2 = {
+				set_country_flag = RE_Norse_runesticks_effect5
+				#Omens, omens everywhere! You are encouraged!
+			}
+			2 = {
+				set_country_flag = RE_Norse_runesticks_effect6
+				#Now you know exactly what must be done!
+			}
+			1 = {
+				set_country_flag = RE_Norse_runesticks_effect7
+				#What to do? What to do? You stray indecisively...
+			}
+			2 = {
+				set_country_flag = RE_Norse_runesticks_effect8
+				#You are the Gods' chosen one!
+			}
+			1 = {
+				set_country_flag = RE_Norse_runesticks_effect9
+				#Gods ignore you and maybe even despise you? Doom surely awaits...
+			}
+			1 = {
+				set_country_flag = RE_Norse_runesticks_effect10
+				#You shall gain victory by your death, fear not!
+				modifier = {
+					factor = 0
+					OR = {
+						has_ruler_flag = RE_Norse_victory_by_death
+						has_ruler_flag = RE_Norse_doomed_to_die
 					}
 				}
 			}
+			1 = {
+				set_country_flag = RE_Norse_runesticks_effect11
+				#Oh no, oh no, you are going to die!
+				modifier = {
+					factor = 0
+					OR = {
+						has_ruler_flag = RE_Norse_victory_by_death
+						has_ruler_flag = RE_Norse_doomed_to_die
+					}
+				}
+			}
+		}
 		#}
 	}
 	option = {
 		name = RE_Norse_Events.9.b
-		add_prestige = -10
+		add_prestige = -5
 		set_country_flag = RE_Norse_refused_to_cast_rune_sticks
 	}
 }
@@ -795,12 +659,12 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = RE_Norse_runesticks_effect11
+				has_country_flag = RE_Norse_runesticks_effect10
 			}
-			custom_tooltip = RE_Norse_Events.10.a.tooltip11
+			custom_tooltip = RE_Norse_Events.10.a.tooltip10
 			add_prestige = 10
 			set_ruler_flag = RE_Norse_victory_by_death
-			clr_country_flag = RE_Norse_runesticks_effect11
+			clr_country_flag = RE_Norse_runesticks_effect10
 		}
 		if = {
 			limit = {
@@ -900,7 +764,9 @@ country_event = {
 			limit = {
 				has_ruler_flag = RE_Norse_victory_by_death
 			}
-			kill_ruler = yes
+			ROOT = {
+				kill_ruler = yes
+			}
 			add_prestige = 25
 			add_country_modifier = {
 				name = RE_Norse_ruler_gone_to_valhalla
@@ -912,7 +778,9 @@ country_event = {
 			limit = {
 				has_ruler_flag = RE_Norse_doomed_to_die
 			}
-			kill_ruler = yes
+			ROOT = {
+				kill_ruler = yes
+			}
 			add_prestige = -25
 			add_country_modifier = {
 				name = RE_Norse_ruler_gone_to_niflheim
@@ -1000,7 +868,7 @@ province_event = {
 		}
 	}
 	mean_time_to_happen = {
-		months = 60
+		months = 90
 	}
 	option = {
 		name = RE_Norse_Events.14.a
@@ -1043,13 +911,13 @@ country_event = {
 	trigger = {
 		religion = norse_pagan_reformed
 		is_at_war = yes
-		war_score = 25
+		war_score = 15
 		NOT = {
 			has_country_modifier = RE_Norse_we_are_worthy
 		}
 	}
 	mean_time_to_happen = {
-		months = 60
+		months = 12
 	}
 	option = {
 		name = RE_Norse_Events.15.a
@@ -1066,23 +934,38 @@ country_event = {
 	title = RE_Norse_Events.16.t
 	desc = RE_Norse_Events.16.d
 	picture = RE_NORSE_VIKINGS_ON_A_LANGSKIP_eventPicture
+	fire_only_once = yes
 	trigger = {
 		religion = norse_pagan_reformed
 		culture_group = scandinavian
+		NOT = {
+			has_country_modifier = RE_Norse_relentlessly_sailing_west
+		}
+		current_age = age_of_discovery
 		OR = {
 			canada_region = {
 				any_province = {
 					has_port = yes
-					NOT = {
-						has_discovered = ROOT
+					OR = {
+						NOT = {
+							has_discovered = ROOT
+						}
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
 			northeast_america_region = {
 				any_province = {
 					has_port = yes
-					NOT = {
-						has_discovered = ROOT
+					OR = {
+						NOT = {
+							has_discovered = ROOT
+						}
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
@@ -1103,7 +986,7 @@ country_event = {
 		custom_tooltip = RE_Norse_Events.16.a.tooltip1
 		add_country_modifier = {
 			name = RE_Norse_relentlessly_sailing_west
-			duration = 9125
+			duration = 18250
 		}
 		hidden_effect = {
 			norwegian_sea_area = {
@@ -1133,6 +1016,171 @@ country_event = {
 					has_port = yes
 				}
 				discover_country = ROOT
+			}
+		}
+	}
+}
+
+#Set RE_Norse_current_living_king
+#Controls all after-dying things with rulers
+country_event = {
+	id = RE_Norse_Events.17
+	title = RE_Norse_Events.17.t
+	desc = RE_Norse_Events.17.d
+	picture = RE_NORSE_RUNESTONE_eventPicture
+	hidden = yes
+	trigger = {
+		religion = norse_pagan_reformed
+		is_lesser_in_union = no
+		NOT = {
+			has_ruler_flag = RE_Norse_current_living_king
+		}
+		NOT = {
+			has_country_flag = RE_Norse_great_ruler_runestone
+		}
+	}
+	immediate = {
+		set_ruler_flag = RE_Norse_current_living_king
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_great_ruler_runestone
+			}
+			country_event = {
+				id = RE_Norse_Events.19
+			}
+			clr_country_flag = RE_Norse_great_ruler_runestone
+		}
+	}
+	option = {
+		name = RE_Norse_Events.17.a
+	}
+}
+
+#Set RE_Norse_great_ruler_runestone
+country_event = {
+	id = RE_Norse_Events.18
+	title = RE_Norse_Events.18.t
+	desc = RE_Norse_Events.18.d
+	picture = RE_NORSE_RUNESTONE_eventPicture
+	hidden = yes
+	trigger = {
+		religion = norse_pagan_reformed
+		has_ruler_flag = RE_Norse_current_living_king
+		NOT = {
+			has_country_flag = RE_Norse_great_ruler_runestone
+		}
+		OR = {
+			adm = 6
+			dip = 6
+			mil = 6
+		}
+	}
+	immediate = {
+		set_country_flag = RE_Norse_great_ruler_runestone
+		if = {
+			limit = {
+				is_female = yes
+			}
+			set_country_flag = RE_Norse_previous_she
+			set_country_flag = RE_Norse_previous_her
+		}
+		else = {
+			set_country_flag = RE_Norse_previous_he
+			set_country_flag = RE_Norse_previous_him
+			set_country_flag = RE_Norse_previous_his
+		}
+	}
+	option = {
+		name = RE_Norse_Events.18.a
+	}
+}
+
+#Erect Runestone
+country_event = {
+	id = RE_Norse_Events.19
+	title = RE_Norse_Events.19.t
+	desc = RE_Norse_Events.19.d
+	picture = RE_NORSE_RUNESTONE_eventPicture
+	trigger = {
+		religion = norse_pagan_reformed
+		NOT = {
+			has_ruler_flag = RE_Norse_current_living_king
+		}
+		has_country_flag = RE_Norse_great_ruler_runestone
+	}
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = RE_Norse_Events.19.a
+		add_years_of_income = -1
+		add_stability = 1
+		add_prestige = 10
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+		add_country_modifier = {
+			name = RE_Norse_erected_runestone
+			duration = 3650
+		}
+	}
+	option = {
+		name = RE_Norse_Events.19.b
+		add_years_of_income = 2
+		add_prestige = -25
+		add_country_modifier = {
+			name = RE_Norse_refused_runestone
+			duration = 3650
+		}
+	}
+	after = {
+		hidden_effect = {
+			clr_country_flag = RE_Norse_previous_she
+			clr_country_flag = RE_Norse_previous_her
+			clr_country_flag = RE_Norse_previous_he
+			clr_country_flag = RE_Norse_previous_him
+			clr_country_flag = RE_Norse_previous_his
+			clr_country_flag = RE_Norse_great_ruler_runestone
+		}
+	}
+}
+
+#Yule!
+country_event = {
+	id = RE_Norse_Events.21
+	title = RE_Norse_Events.21.t
+	desc = RE_Norse_Events.21.d
+	picture = RE_NORSE_SACRIFICE2_eventPicture
+	trigger = {
+		religion = norse_pagan_reformed
+		is_month = 11
+		OR = {
+			NOT = {
+				has_country_flag = RE_Norse_yule_to_remember
+			}
+			had_country_flag = {
+				flag = RE_Norse_yule_to_remember
+				days = 3650
+			}
+		}
+	}
+	option = {
+		name = RE_Norse_Events.21.a
+		add_stability_or_adm_power = yes
+		add_prestige = 10
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = RE_Norse_yule_to_remember
+				}
+				clr_country_flag = RE_Norse_yule_to_remember
+				set_country_flag = RE_Norse_yule_to_remember
+			}
+			else = {
+				set_country_flag = RE_Norse_yule_to_remember
 			}
 		}
 	}

@@ -14,6 +14,9 @@
     RE_Norse_we_are_worthy: "We Are Worthy!"
     RE_Norse_raided_province: "Plundered Province"
     RE_Norse_relentlessly_sailing_west: "Relentlessly Sailing West"
+    RE_Norse_erected_runestone: "Erected Runestone"
+    RE_Norse_refused_runestone: "Refused Runestone"
+    RE_Norse_plundered_province: "Plundered Province"
 
     #OPINIONS
     RE_Norse_viking_raid: "Viking Raid"
@@ -27,7 +30,7 @@
     RE_Norse_Events.2.t: "Flock is Gathering"
     RE_Norse_Events.2.d: "The news is that the believers of Norse faith's old customs are rising in numbers and their influence is spreading like a wildfire.\n\nIf we want to stop them, we must act swiftly as such a situation, left unsettled might quickly get out of control and become gravely dangerous."
     RE_Norse_Events.2.a: "We must stop them!"
-    RE_Norse_Events.2.a: "Let them grow..."
+    RE_Norse_Events.2.b: "Let them grow..."
     
     RE_Norse_Events.4.t: "Hail to Odin!"
     RE_Norse_Events.4.d: "The preachers of the Norse faith encouraged by the recent events have woken up from their slumber. Armed in whatever they could find, they have emerged from hidden places and flocked under the raven banner of Odin, hailing in his name.\n\nThe word of rebellion quickly spreads through the country, encouraging even more people to join in.Rebels have only one demand, as it seems - to recognize their never really forgotten customs as a true and only one religion of state!"
@@ -51,17 +54,22 @@
     RE_Norse_Events.7.d: "In the years passed our ancestors were constantly invading neighbour lands for loot in gold and slaves. Many of our people view this act as something more than just a custom but rather as a natural way of how the world works - if you lack something then you go and take it from someone who has it in plenty (or just has it at all).\n\nNo wonder why they are so willing to take their sword, axes and go for plunder. Of course this will give our neighbours a valid cause to take a revenge on us."
     RE_Norse_Events.7.a: "Hah! As long as I can get my share!"
     RE_Norse_Events.7.a.tooltip1: "We will raid §Y[This.GetName]§!!"
-    RE_Norse_Events.7.a.tooltip2: "§Y[This.GetName]§! will be plundered for another §Y10§! years."
+    RE_Norse_Events.7.a.tooltip2: "Our warriors will plunder this province.\nSoon we will hear from them..."
     RE_Norse_Events.7.b: "No, I don't think so..."
     
     RE_Norse_Events.8.t: "Viking Raid!"
     RE_Norse_Events.8.d: "These murderous beasts from [From.GetName] just crossed the border out of nowhere and started to plunder! They have taken whatever they wanted, whoever they could enslave and then raped, killed or burned anything else.\n\nNow only white embers glows amidst the ruins and the cries of our fallen fill the sky."
     RE_Norse_Events.8.a: "Damn them! I shall have my revenge!"
-    RE_Norse_Events.8.a.tooltip1: "§Y[This.GetName]§! will be plundered for another §Y10§! years."
+    RE_Norse_Events.8.a.tooltip1: "Randomly lose §R1§! Base Development in §Y[This.GetName]§!."
+    
+    RE_Norse_Events.20.t: "Vikings Return from [From.GetName]!"
+    RE_Norse_Events.20.d: "Our warriors have just got back from [From.GetName] hauling their loot. These riches will provide for families and of course for your country overall!\n\nThis is indeed a great day and people are happy to hear about such a successful sortie."
+    RE_Norse_Events.20.a: "And happy am I!"
     
     RE_Norse_Events.9.t: "The Seer"
     RE_Norse_Events.9.d: "In the eve of your march to the war, the Seer approaches and offers casting rune sticks to foretell your fate. You may agree and take a look in the upcoming future but be aware as Seers almost always speak in riddles.\n\nShould gods favour you, great things might be revealed and come to your aid but if you are not gods' favourite then you invite your doom!"
     RE_Norse_Events.9.a: "Let the veil be revealed..."
+    RE_Norse_Events.9.b: "No, definitely not!"
     RE_Norse_Events.9.b: "No, definitely not!"
     
     RE_Norse_Events.10.t: "Prophecy"
@@ -114,6 +122,28 @@
     RE_Norse_Events.16.d: "Our forefathers once sailed west, seeking glory and new lands to colonize. They found the rich islands of Britannia and just then pushed further, discovering Iceland and other places. Some sagas even tell us about mysterious lands of Vinland.\n\nThe bravest sailors among us always wanted to continue this glorious endeavour and relentlessly push the undiscovered frontier further west. Now the news spread that there are indeed new lands behind that ever unsettled mists to be penetrated and harnessed.\n\nThe rich lands of new opportunities and dangers await!" 
     RE_Norse_Events.16.a: "Njord preserve us, we are going west!"
     RE_Norse_Events.16.a.tooltip1: "You discover the way to northern shores of §YNorth America§!!"
+    
+    RE_Norse_Events.17.t: "Set RE_Norse_current_living_king"
+    RE_Norse_Events.17.d: "Set RE_Norse_current_living_king" 
+    RE_Norse_Events.17.a: "Set RE_Norse_current_living_king"
+    
+    RE_Norse_Events.18.t: "Set RE_Norse_great_ruler_runestone"
+    RE_Norse_Events.18.d: "Set RE_Norse_great_ruler_runestone" 
+    RE_Norse_Events.18.a: "Set RE_Norse_great_ruler_runestone"
+    
+    RE_Norse_Events.19.t: "Erect Runestone"
+    RE_Norse_Events.19.d: "The predecessor of yours was a great ruler! Or at least that is being widely told. The tales go the rounds among people, speaking about [RE_Norse_previous_hisher] virtues and how [RE_Norse_previous_heshe] was always able to do things right no matter how hard the times were.\n\nWhatever [RE_Norse_previous_heshe] was dear to you or was basically your bitter enemy, [RE_Norse_previous_hisher] deeds can not be just simply denied in the eyes of gods and especially in the eyes of crowds.\n\nMoreover, that would be a great idea to honour [RE_Norse_previous_himher] by erecting a great runestone! It would surely satisfy your people and send straight message about your own sense of justice."
+    RE_Norse_Events.19.a: "Honour [RE_Norse_previous_himher]!"
+    RE_Norse_Events.19.b: "I do have more urgent spendings..."
+    string_RE_Norse_previous_he: "he"
+    string_RE_Norse_previous_she: "she"
+    string_RE_Norse_previous_him: "him"
+    string_RE_Norse_previous_her: "her"
+    string_RE_Norse_previous_his: "his"
+    
+    RE_Norse_Events.21.t: "The Great Yule to Remember!"
+    RE_Norse_Events.21.d: "The end of year is coming near and as that the time of great celebrating and the time of great sacrifices comes too. Let the fires burn ablaze!\n\nThe livestock is to be killed, the blood of animals is to be collected and ritually sprinkled on the idols, on the walls of temples, on the faces of gathered people. And then the meat is to be boiled and served upon the great festival.\n\nWe shall fill the goblets with ale and drink until we can drink no more.\n\nTo Odin, for victory and power to the king!\nTo Njord, to Freyr, for good harvest and for peace!\nAnd to the [Root.Monarch.GetTitle]!\nAnd to the ones who are gone..." 
+    RE_Norse_Events.21.a: "Until the next time!"
     
     RE_Norse_Events.100.t: "Set Flag"
     RE_Norse_Events.100.d: "Set Flag"

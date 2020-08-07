@@ -1,13 +1,11 @@
 defined_text = {
 	name = RE_Norse_prophesied_death
-
 	text = {
 		localisation_key = string_RE_Norse_victory_by_death
 		trigger = {
 			has_ruler_flag = RE_Norse_victory_by_death
 		}
 	}
-
 	text = {
 		localisation_key = string_RE_Norse_doomed_to_die
 		trigger = {
@@ -18,18 +16,63 @@ defined_text = {
 
 defined_text = {
 	name = RE_Norse_visit_from_odin
-
 	text = {
 		localisation_key = string_RE_Norse_agreed_to_cast_rune_sticks
 		trigger = {
 			has_country_flag = RE_Norse_agreed_to_cast_rune_sticks
 		}
 	}
-
 	text = {
 		localisation_key = string_RE_Norse_refused_to_cast_rune_sticks
 		trigger = {
 			has_country_flag = RE_Norse_refused_to_cast_rune_sticks
+		}
+	}
+}
+
+defined_text = {
+	name = RE_Norse_previous_heshe
+	text = {
+		localisation_key = string_RE_Norse_previous_he
+		trigger = {
+			has_country_flag = RE_Norse_previous_he
+		}
+	}
+	text = {
+		localisation_key = string_RE_Norse_previous_she
+		trigger = {
+			has_country_flag = RE_Norse_previous_she
+		}
+	}
+}
+
+defined_text = {
+	name = RE_Norse_previous_himher
+	text = {
+		localisation_key = string_RE_Norse_previous_him
+		trigger = {
+			has_country_flag = RE_Norse_previous_him
+		}
+	}
+	text = {
+		localisation_key = string_RE_Norse_previous_her
+		trigger = {
+			has_country_flag = RE_Norse_previous_her
+		}
+	}
+}
+defined_text = {
+	name = RE_Norse_previous_hisher
+	text = {
+		localisation_key = string_RE_Norse_previous_his
+		trigger = {
+			has_country_flag = RE_Norse_previous_his
+		}
+	}
+	text = {
+		localisation_key = string_RE_Norse_previous_her
+		trigger = {
+			has_country_flag = RE_Norse_previous_her
 		}
 	}
 }

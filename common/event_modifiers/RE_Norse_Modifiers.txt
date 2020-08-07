@@ -61,7 +61,7 @@ RE_Norse_we_are_worthy = {
 }
 
 RE_Norse_plundered_province = {
-	local_unrest = 1
+	local_unrest = 5
 	local_development_cost = 0.25
 }
 
@@ -70,4 +70,13 @@ RE_Norse_relentlessly_sailing_west = {
 	global_colonial_growth = 20
 	colonist_placement_chance = 0.025
 	range = 1
+}
+
+RE_Norse_erected_runestone = {
+	prestige = 1
+	tolerance_own = 1
+}
+
+RE_Norse_refused_runestone = {
+	tolerance_own = -2
 }
