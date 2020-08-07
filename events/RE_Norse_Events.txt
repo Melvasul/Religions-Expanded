@@ -142,10 +142,10 @@ country_event = {
 		all_owned_province = {
 			any_neighbor_province = {
 				NOT = {
-					AND = {
-						religion = norse_pagan_reformed
-						owned_by = ROOT
-					}
+					religion = norse_pagan_reformed
+				}
+				NOT = {
+					owned_by = ROOT
 				}
 			}
 		}
@@ -159,11 +159,6 @@ country_event = {
 			factor = 1
 		}
 		random_neighbor_country = {
-			limit = {
-				NOT = {
-					religion = norse_pagan_reformed
-				}
-			}
 			random_owned_province = {
 				limit = {
 					any_neighbor_province = {
@@ -201,7 +196,7 @@ country_event = {
 	}
 }
 
-#Norse Heathens?
+#Spreading Norse Faith
 country_event = {
 	id = RE_Norse_Events.6
 	title = RE_Norse_Events.6.t
@@ -210,9 +205,26 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = RE_Norse_Events.6.a
+		add_prestige = -5
+		add_opinion = {
+			who = FROM
+			modifier = RE_Norse_proselyting_negative
+		}
 		add_casus_belli = {
 			type = cb_border_war
 			target = FROM
+		}
+	}
+	option = {
+		name = RE_Norse_Events.6.b
+		highlight = yes
+		trigger = {
+			religion = norse_pagan_reformed
+		}
+		add_adm_power = 50
+		add_opinion = {
+			who = FROM
+			modifier = RE_Norse_proselyting_positive
 		}
 	}
 }
@@ -944,7 +956,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		months = 120
+		months = 200
 	}
 	option = {
 		name = RE_Norse_Events.13.a
@@ -1044,6 +1056,84 @@ country_event = {
 		add_country_modifier = {
 			name = RE_Norse_we_are_worthy
 			duration = 1780
+		}
+	}
+}
+
+#Relentlessly Sailing West
+country_event = {
+	id = RE_Norse_Events.16
+	title = RE_Norse_Events.16.t
+	desc = RE_Norse_Events.16.d
+	picture = RE_NORSE_VIKINGS_ON_A_LANGSKIP_eventPicture
+	trigger = {
+		religion = norse_pagan_reformed
+		culture_group = scandinavian
+		OR = {
+			canada_region = {
+				any_province = {
+					has_port = yes
+					NOT = {
+						has_discovered = ROOT
+					}
+				}
+			}
+			northeast_america_region = {
+				any_province = {
+					has_port = yes
+					NOT = {
+						has_discovered = ROOT
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = expansion_ideas
+			}
+		}
+	}
+	option = {
+		name = RE_Norse_Events.16.a
+		custom_tooltip = RE_Norse_Events.16.a.tooltip1
+		add_country_modifier = {
+			name = RE_Norse_relentlessly_sailing_west
+			duration = 9125
+		}
+		hidden_effect = {
+			norwegian_sea_area = {
+				discover_country = ROOT
+			}
+			denmark_strait_area = {
+				discover_country = ROOT
+			}
+			sea_of_labrador_area = {
+				discover_country = ROOT
+			}
+			gulf_of_st_lawrence_area = {
+				discover_country = ROOT
+			}
+			gulf_stream_area = {
+				discover_country = ROOT
+			}
+			every_province = {
+				limit = {
+					OR = {
+						region = canada_region
+						region = northeast_america_region
+					}
+					NOT = {
+						has_discovered = ROOT
+					}
+					has_port = yes
+				}
+				discover_country = ROOT
+			}
 		}
 	}
 }

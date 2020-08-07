@@ -64,3 +64,10 @@ RE_Norse_plundered_province = {
 	local_unrest = 1
 	local_development_cost = 0.25
 }
+
+RE_Norse_relentlessly_sailing_west = {
+	colonists = 1
+	global_colonial_growth = 20
+	colonist_placement_chance = 0.025
+	range = 1
+}
