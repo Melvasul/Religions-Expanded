@@ -1,0 +1,91 @@
+RE_Norse_holy_site_temple_of_maere = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+		owner = {
+			religion = norse_pagan_reformed
+		}
+	}
+
+	prestige = 0.2
+	global_manpower_modifier = 0.025
+	global_sailors_modifier = 0.025
+
+	on_activation = {
+	}
+
+	on_deactivation = {
+	}
+}
+
+RE_Norse_holy_site_temple_of_uppsala = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+		owner = {
+			religion = norse_pagan_reformed
+		}
+	}
+
+	prestige = 0.2
+	global_manpower_modifier = 0.025
+	global_sailors_modifier = 0.025
+
+	on_activation = {
+	}
+
+	on_deactivation = {
+	}
+}
+
+RE_Norse_holy_site_mead_hall_of_lejre = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+		owner = {
+			religion = norse_pagan_reformed
+		}
+	}
+
+	prestige = 0.2
+	global_manpower_modifier = 0.025
+	global_sailors_modifier = 0.025
+
+	on_activation = {
+	}
+
+	on_deactivation = {
+	}
+}
+
+RE_Norse_holy_site_holy_mountain_helgafell = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+		owner = {
+			religion = norse_pagan_reformed
+		}
+	}
+
+	prestige = 0.2
+	global_manpower_modifier = 0.025
+	global_sailors_modifier = 0.025
+
+	on_activation = {
+	}
+
+	on_deactivation = {
+	}
+}

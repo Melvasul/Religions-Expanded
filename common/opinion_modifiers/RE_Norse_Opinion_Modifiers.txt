@@ -1,6 +1,6 @@
 RE_Norse_viking_raid = {
-	opinion = -25
-	yearly_decay = -2
+	opinion = -50
+	yearly_decay = 2
 }
 
 RE_Norse_proselyting_positive = {
@@ -10,5 +10,5 @@ RE_Norse_proselyting_positive = {
 
 RE_Norse_proselyting_negative = {
 	opinion = -50
-	yearly_decay = -2
+	yearly_decay = 2
 }

@@ -72,14 +72,32 @@ country_event = {
 	picture = CORRUPTION_eventPicture
 	hidden = yes
 	trigger = {
-		religion = norse_pagan_reformed
-		all_owned_province = {
-			religion = norse_pagan_reformed
-		}
-		any_owned_province = {
-			OR = {
-				has_province_flag = RE_Norse_current_infected
-				has_province_flag = RE_Norse_previous_infected
+		OR = {
+			AND = {
+				religion = norse_pagan_reformed
+				all_owned_province = {
+					religion = norse_pagan_reformed
+				}
+				any_owned_province = {
+					OR = {
+						has_province_flag = RE_Norse_current_infected
+						has_province_flag = RE_Norse_previous_infected
+					}
+				}
+			}
+			AND = {
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+				NOT = {
+					culture_group = scandinavian
+				}
+				any_owned_province = {
+					OR = {
+						has_province_flag = RE_Norse_current_infected
+						has_province_flag = RE_Norse_previous_infected
+					}
+				}
 			}
 		}
 	}
@@ -119,7 +137,7 @@ province_event = {
 	}
 	option = {
 		name = RE_Norse_Events.4.a
-		norse_pagan_reformed_rebels = 3
+		norse_pagan_reformed_rebels = 2
 	}
 }
 
@@ -168,7 +186,7 @@ country_event = {
 			change_religion = norse_pagan_reformed
 			add_province_modifier = {
 				name = religious_zeal_at_conv
-				duration = 3650
+				duration = 1825
 			}
 			province_event = {
 				id = RE_Norse_Events.6
@@ -253,6 +271,9 @@ country_event = {
 					overlord_of = ROOT
 				}
 			}
+			NOT = {
+				is_subject_of = ROOT
+			}
 			any_owned_province = {
 				any_neighbor_province = {
 					owned_by = ROOT
@@ -264,9 +285,9 @@ country_event = {
 					has_province_flag = RE_Norse_currently_being_plundered
 				}
 				OR = {
-					base_tax = 1
-					base_production = 1
-					base_manpower = 1
+					base_tax = 2
+					base_production = 2
+					base_manpower = 2
 				}
 			}
 		}
@@ -290,6 +311,9 @@ country_event = {
 						overlord_of = ROOT
 					}
 				}
+				NOT = {
+					is_subject_of = ROOT
+				}
 			}
 			custom_tooltip = RE_Norse_Events.7.a.tooltip1
 			random_owned_province = {
@@ -300,10 +324,13 @@ country_event = {
 					NOT = {
 						has_province_modifier = RE_Norse_plundered_province
 					}
+					NOT = {
+						has_province_flag = RE_Norse_currently_being_plundered
+					}
 					OR = {
-						base_tax = 1
-						base_production = 1
-						base_manpower = 1
+						base_tax = 2
+						base_production = 2
+						base_manpower = 2
 					}
 				}
 				hidden_effect = {
@@ -342,7 +369,7 @@ province_event = {
 					modifier = {
 						factor = 0
 						NOT = {
-							base_tax = 1
+							base_tax = 2
 						}
 					}
 					add_base_tax = -1
@@ -354,7 +381,7 @@ province_event = {
 					modifier = {
 						factor = 0
 						NOT = {
-							base_production = 1
+							base_production = 2
 						}
 					}
 					add_base_production = -1
@@ -366,7 +393,7 @@ province_event = {
 					modifier = {
 						factor = 0
 						NOT = {
-							base_manpower = 1
+							base_manpower = 2
 						}
 					}
 					add_base_manpower = -1
@@ -1183,6 +1210,47 @@ country_event = {
 				set_country_flag = RE_Norse_yule_to_remember
 			}
 		}
+	}
+}
+
+#Holy Sites
+country_event = {
+	id = RE_Norse_Events.22
+	title = RE_Norse_Events.22.t
+	desc = RE_Norse_Events.22.d
+	picture = RE_NORSE_PYRE_eventPicture
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {
+		name = RE_Norse_Events.22.a
+		custom_tooltip = RE_Norse_Events.22.a.tooltip1
+		hidden_effect = {
+			#Trondelag
+			20 = {
+				add_province_triggered_modifier = RE_Norse_holy_site_temple_of_maere
+			}
+			#Stockholm
+			1 = {
+				add_province_triggered_modifier = RE_Norse_holy_site_temple_of_uppsala
+			}
+			#Sjaelland
+			12 = {
+				add_province_triggered_modifier = RE_Norse_holy_site_mead_hall_of_lejre
+			}
+			#Reykjavik
+			370 = {
+				add_province_triggered_modifier = RE_Norse_holy_site_holy_mountain_helgafell
+			}
+		}
+	}
+	after = {
+		set_global_flag = RE_Norse_holy_sites_active
 	}
 }
 

@@ -17,9 +17,24 @@
     RE_Norse_erected_runestone: "Erected Runestone"
     RE_Norse_refused_runestone: "Refused Runestone"
     RE_Norse_plundered_province: "Plundered Province"
+    
+    #PROVINCE_TRIGGERED_MODIFIERS
+    RE_Norse_holy_site_temple_of_maere: "Temple of Maere"
+    RE_Norse_holy_site_temple_of_uppsala: "Temple of Uppsala"
+    RE_Norse_holy_site_mead_hall_of_lejre: "Mead Hall of Lejre"
+    RE_Norse_holy_site_holy_mountain_helgafell: "Holy Mountain Helgafell"
+    
+    #TRIGGERED_MODIFIERS
+    RE_Norse_owned_norse_holy_sites_1: "Norse Fury!"
+    RE_Norse_owned_norse_holy_sites_2: "Norse Fury!"
+    RE_Norse_owned_norse_holy_sites_3: "Norse Fury!"
+    RE_Norse_owned_norse_holy_sites_4: "Norse Fury!"
+    RE_Norse_holy_sites_trigger_tooltip1: "Have the active province modifier:\n   Trondelag: §YTemple of Maere§!\n   Stockholm: §YTemple of Uppsala§!\n   Sjaelland: §YMead Hall of Lejre§!\n   Reykjavik: §YHoly Mountain Helgafell§!\nThe more holy places you control the stronger fury of Norse believers becomes!"
 
     #OPINIONS
     RE_Norse_viking_raid: "Viking Raid"
+    RE_Norse_proselyting_positive: "Spread Norse Faith"
+    RE_Norse_proselyting_negative: "Spread Norse Faith"
 
     #EVENTS
     RE_Norse_Events.1.t: "Where are the Ice Giants?"
@@ -144,6 +159,11 @@
     RE_Norse_Events.21.t: "The Great Yule to Remember!"
     RE_Norse_Events.21.d: "The end of year is coming near and as that the time of great celebrating and the time of great sacrifices comes too. Let the fires burn ablaze!\n\nThe livestock is to be killed, the blood of animals is to be collected and ritually sprinkled on the idols, on the walls of temples, on the faces of gathered people. And then the meat is to be boiled and served upon the great festival.\n\nWe shall fill the goblets with ale and drink until we can drink no more.\n\nTo Odin, for victory and power to the king!\nTo Njord, to Freyr, for good harvest and for peace!\nAnd to the [Root.Monarch.GetTitle]!\nAnd to the ones who are gone..." 
     RE_Norse_Events.21.a: "Until the next time!"
+    
+    RE_Norse_Events.22.t: "Holy Sites"
+    RE_Norse_Events.22.d: "The old sacred places lie in ruins, destroyed or profaned by Christians.\n\nThe time has come to finally declare that no one is allowed to desecrate these holy places any longer! We shall take them back, arise our idols and ablaze sacred fires anew. And just then the blood of fools and unbelievers shall flow to make our gods laugh and give them honour, and victory, and prosperity until the whole world cracks apart in the flames of Ragnarok!"
+    RE_Norse_Events.22.a: "It must be done."
+    RE_Norse_Events.22.a.tooltip1: "The holy sites of Norse faith are marked in:\n   Trondelag: §YTemple of Maere§!\n   Stockholm: §YTemple of Uppsala§!\n   Sjaelland: §YMead Hall of Lejre§!\n   Reykjavik: §YHoly Mountain Helgafell§!"
     
     RE_Norse_Events.100.t: "Set Flag"
     RE_Norse_Events.100.d: "Set Flag"
