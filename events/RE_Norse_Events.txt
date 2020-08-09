@@ -133,11 +133,23 @@ province_event = {
 		religion = norse_pagan_reformed
 	}
 	mean_time_to_happen = {
-		months = 90
+		months = 120
 	}
 	option = {
 		name = RE_Norse_Events.4.a
-		norse_pagan_reformed_rebels = 2
+		if = {
+			limit = {
+				culture_group = scandinavian
+			}
+			norse_pagan_reformed_rebels = 1
+			norse_pagan_reformed_rebels = 1
+			norse_pagan_reformed_rebels = 1
+			norse_pagan_reformed_rebels = 1
+			norse_pagan_reformed_rebels = 1
+		}
+		else = {
+			norse_pagan_reformed_rebels = 2
+		}
 	}
 }
 
@@ -163,7 +175,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		months = 60
+		months = 90
 	}
 	option = {
 		name = RE_Norse_Events.5.a
@@ -1251,6 +1263,35 @@ country_event = {
 	}
 	after = {
 		set_global_flag = RE_Norse_holy_sites_active
+	}
+}
+
+#Back to the Roots
+country_event = {
+	id = RE_Norse_Events.23
+	title = RE_Norse_Events.23.t
+	desc = RE_Norse_Events.23.d
+	picture = RE_NORSE_VIKING_AFTER_BATTLE_eventPicture
+	trigger = {
+		culture_group = scandinavian
+		dominant_religion = norse_pagan_reformed
+		has_spawned_rebels = norse_pagan_reformed_rebels
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = RE_Norse_Events.23.a
+		change_religion = norse_pagan_reformed
+		add_stability = -1
+	}
+	option = {
+		name = RE_Norse_Events.23.b
+		add_prestige = 10
+		add_country_modifier = {
+			name = RE_Norse_unaccepted_infidels
+			duration = 3650
+		}
 	}
 }
 

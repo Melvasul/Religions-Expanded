@@ -165,6 +165,11 @@
     RE_Norse_Events.22.a: "It must be done."
     RE_Norse_Events.22.a.tooltip1: "The holy sites of Norse faith are marked in:\n   Trondelag: §YTemple of Maere§!\n   Stockholm: §YTemple of Uppsala§!\n   Sjaelland: §YMead Hall of Lejre§!\n   Reykjavik: §YHoly Mountain Helgafell§!"
     
+    RE_Norse_Events.23.t: "Back to the Roots"
+    RE_Norse_Events.23.d: "The country is almost broken! Heathens wander everywhere plundering and killing whoever stands against them. Our churches are burned, priest killed and nuns raped.\n\nSome say we are just at the brink of The Judgement Day and the others just simply claim there is no other way to solve the whole situation than surrender to heathens' demands and embrace the old ways of our forefathers. Maybe it is the highest time to accept the truth - our God is weak, abandoned us and no longer care.\n\nWhy to believe in such a miserable being?"
+    RE_Norse_Events.23.a: "That's right! I can finally see the truth"
+    RE_Norse_Events.23.b: "Heresy! Kill them all, Lord knows his own!"
+    
     RE_Norse_Events.100.t: "Set Flag"
     RE_Norse_Events.100.d: "Set Flag"
     RE_Norse_Events.100.a: "RE_Norse_victory_by_death"
