@@ -8,6 +8,12 @@ RE_Norse_holy_site_temple_of_maere = {
 		owner = {
 			religion = norse_pagan_reformed
 		}
+		custom_trigger_tooltip = {
+			tooltip = RE_Norse_holy_site_temple_of_maere.tooltip1
+			hidden_trigger = {
+				has_global_flag = RE_Norse_temple_of_maere_rebuilt
+			}
+		}
 	}
 
 	prestige = 0.2
@@ -30,6 +36,12 @@ RE_Norse_holy_site_temple_of_uppsala = {
 		religion = norse_pagan_reformed
 		owner = {
 			religion = norse_pagan_reformed
+		}
+		custom_trigger_tooltip = {
+			tooltip = RE_Norse_holy_site_temple_of_uppsala.tooltip1
+			hidden_trigger = {
+				has_global_flag = RE_Norse_temple_of_uppsala_rebuilt
+			}
 		}
 	}
 
@@ -54,6 +66,12 @@ RE_Norse_holy_site_mead_hall_of_lejre = {
 		owner = {
 			religion = norse_pagan_reformed
 		}
+		custom_trigger_tooltip = {
+			tooltip = RE_Norse_holy_site_mead_hall_of_lejre.tooltip1
+			hidden_trigger = {
+				has_global_flag = RE_Norse_mead_hall_of_lejre_rebuilt
+			}
+		}
 	}
 
 	prestige = 0.2
@@ -76,6 +94,12 @@ RE_Norse_holy_site_holy_mountain_helgafell = {
 		religion = norse_pagan_reformed
 		owner = {
 			religion = norse_pagan_reformed
+		}
+		custom_trigger_tooltip = {
+			tooltip = RE_Norse_holy_site_holy_mountain_helgafell.tooltip1
+			hidden_trigger = {
+				has_global_flag = RE_Norse_holy_mountain_helgafell_sanctified
+			}
 		}
 	}
 

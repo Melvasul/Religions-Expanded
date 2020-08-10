@@ -938,6 +938,16 @@ province_event = {
 				name = RE_Norse_unaccepted_infidels
 				duration = 3650
 			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = RE_Norse_unaccepted_infidels
+				influence = 10
+				duration = 3650
+			}
 		}
 	}
 	option = {
@@ -948,6 +958,16 @@ province_event = {
 				name = RE_Norse_accepted_infidels
 				duration = 3650
 			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = RE_Norse_unaccepted_infidels
+				influence = -10
+				duration = 3650
+			}
 		}
 	}
 	option = {
@@ -955,6 +975,10 @@ province_event = {
 		owner = {
 			add_stability = -1
 			add_prestige = -10
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
 		}
 	}
 }
@@ -1392,6 +1416,7 @@ country_event = {
 	}
 }
 
+#The True Shieldmaiden!
 country_event = {
 	id = RE_Norse_Events.25
 	title = RE_Norse_Events.25.t
@@ -1416,6 +1441,133 @@ country_event = {
 		}
 	}
 }
+
+#Setter for Holy Sities Clery Equilibrium
+country_event = {
+	id = RE_Norse_Events.26
+	title = RE_Norse_Events.26.t
+	desc = RE_Norse_Events.26.d
+	picture = RE_NORSE_PYRE_eventPicture
+	hidden = yes
+	trigger = {
+		religion = norse_pagan_reformed
+		OR = {
+			OR = {
+				AND = {
+					any_owned_province = {
+						has_active_triggered_province_modifier = RE_Norse_holy_site_temple_of_maere
+					}
+					NOT = {
+						has_country_modifier = RE_Norse_temple_of_maere
+					}
+				}
+				AND = {
+					any_owned_province = {
+						has_active_triggered_province_modifier = RE_Norse_holy_site_temple_of_uppsala
+					}
+					NOT = {
+						has_country_modifier = RE_Norse_temple_of_uppsala
+					}
+				}
+				AND = {
+					any_owned_province = {
+						has_active_triggered_province_modifier = RE_Norse_holy_site_mead_hall_of_lejre	
+					}
+					NOT = {
+						has_country_modifier = RE_Norse_mead_hall_of_lejre	
+					}
+				}
+				AND = {
+					any_owned_province = {
+						has_active_triggered_province_modifier = RE_Norse_holy_site_holy_mountain_helgafell	
+					}
+					NOT = {
+						has_country_modifier = RE_Norse_holy_mountain_helgafell	
+					}
+				}
+			}
+			OR = {
+				AND = {
+					NOT = {
+						any_owned_province = {
+							has_active_triggered_province_modifier = RE_Norse_holy_site_temple_of_maere
+						}
+					}
+					has_country_modifier = RE_Norse_temple_of_maere
+				}
+				AND = {
+					NOT = {
+						any_owned_province = {
+							has_active_triggered_province_modifier = RE_Norse_holy_site_temple_of_uppsala
+						}
+					}
+					has_country_modifier = RE_Norse_temple_of_uppsala
+				}
+				AND = {
+					NOT = {
+						any_owned_province = {
+							has_active_triggered_province_modifier = RE_Norse_holy_site_mead_hall_of_lejre
+						}
+					}
+					has_country_modifier = RE_Norse_mead_hall_of_lejre
+				}
+				AND = {
+					NOT = {
+						any_owned_province = {
+							has_active_triggered_province_modifier = RE_Norse_holy_site_holy_mountain_helgafell
+						}
+					}
+					has_country_modifier = RE_Norse_holy_mountain_helgafell
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_owned_province = {
+					has_active_triggered_province_modifier = RE_Norse_holy_site_temple_of_maere
+				}
+				NOT = {
+					has_country_modifier = RE_Norse_temple_of_maere
+				}
+			}
+			add_country_modifier = {
+				name = RE_Norse_temple_of_maere
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			remove_country_modifier = RE_Norse_temple_of_maere
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_active_triggered_province_modifier = RE_Norse_holy_site_temple_of_uppsala
+				}
+				NOT = {
+					has_country_modifier = RE_Norse_temple_of_uppsala
+				}
+			}
+			add_country_modifier = {
+				name = RE_Norse_temple_of_uppsala
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			remove_country_modifier = RE_Norse_temple_of_uppsala
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = RE_Norse_Events.26.a
+	}
+}
+
 country_event = {
 	id = RE_Norse_Events.100
 	title = RE_Norse_Events.100.t

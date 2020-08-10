@@ -17,19 +17,41 @@
     RE_Norse_erected_runestone: "Erected Runestone"
     RE_Norse_refused_runestone: "Refused Runestone"
     RE_Norse_plundered_province: "Plundered Province"
+    RE_Norse_temple_of_maere: "Controls Temple of Maere"
+    RE_Norse_temple_of_uppsala: "Controls Temple of Uppsala"
+    RE_Norse_mead_hall_of_lejre: "Controls Mead Hall of Lejre"
+    RE_Norse_holy_mountain_helgafell: "Controls Holy Mountain Helgafell"
     
     #PROVINCE_TRIGGERED_MODIFIERS
-    RE_Norse_holy_site_temple_of_maere: "Temple of Maere"
-    RE_Norse_holy_site_temple_of_uppsala: "Temple of Uppsala"
-    RE_Norse_holy_site_mead_hall_of_lejre: "Mead Hall of Lejre"
-    RE_Norse_holy_site_holy_mountain_helgafell: "Holy Mountain Helgafell"
+    RE_Norse_holy_site_temple_of_maere: "Temple of Maere\n§WClergy Estate Equilibrium:§! §G+2.5%§!"
+    RE_Norse_holy_site_temple_of_maere.tooltip1: "Rebuilt Temple of Maere"
+    RE_Norse_holy_site_temple_of_uppsala: "Temple of Uppsala\n§WClergy Estate Equilibrium:§! §G+2.5%§!"
+    RE_Norse_holy_site_temple_of_uppsala.tooltip1: "Rebuilt Temple of Uppsala"
+    RE_Norse_holy_site_mead_hall_of_lejre: "Mead Hall of Lejre\n§WClergy Estate Equilibrium:§! §G+2.5%§!"
+    RE_Norse_holy_site_mead_hall_of_lejre.tooltip1: "Rebuilt Mead Hall of Lejre"
+    RE_Norse_holy_site_holy_mountain_helgafell: "Holy Mountain Helgafell\n§WClergy Estate Equilibrium:§! §G+2.5%§!"
+    RE_Norse_holy_site_holy_mountain_helgafell.tooltip1: "Sanctified Holy Mountain Helgafell"
     
     #TRIGGERED_MODIFIERS
     RE_Norse_owned_norse_holy_sites_1: "Norse Fury!"
     RE_Norse_owned_norse_holy_sites_2: "Norse Fury!"
     RE_Norse_owned_norse_holy_sites_3: "Norse Fury!"
     RE_Norse_owned_norse_holy_sites_4: "Norse Fury!"
-    RE_Norse_holy_sites_trigger_tooltip1: "Have the active province modifier:\n   Trondelag: §YTemple of Maere§!\n   Stockholm: §YTemple of Uppsala§!\n   Sjaelland: §YMead Hall of Lejre§!\n   Reykjavik: §YHoly Mountain Helgafell§!\nThe more holy places you control the stronger fury of Norse believers becomes!"
+    RE_Norse_holy_sites_trigger_tooltip1: "Have the active province modifier:\n\n   Trondelag: §YTemple of Maere§!\n   Stockholm: §YTemple of Uppsala§!\n   Sjaelland: §YMead Hall of Lejre§!\n   Reykjavik: §YHoly Mountain Helgafell§!\n\nThe more holy places you control the stronger fury of Norse believers becomes!"
+    
+    #DECISIONS
+    RE_Norse_rebuild_temple_of_maere_title: "Rebuild Temple of Maere"
+    RE_Norse_rebuild_temple_of_maere_desc: "The time has come to rebuild once profaned and destroyed temple of our gods."
+    RE_Norse_rebuild_temple_of_maere.tooltip1: "Rebuild Temple of Maere"
+    RE_Norse_rebuild_temple_of_uppsala_title: "Rebuild Temple of Uppsala"
+    RE_Norse_rebuild_temple_of_uppsala_desc: "The time has come to rebuild once profaned and destroyed temple of our gods."
+    RE_Norse_rebuild_temple_of_uppsala.tooltip1: "Rebuild Temple of Uppsala"
+    RE_Norse_rebuild_mead_hall_of_lejre_title: "Rebuild Mead Hall of Lejre"
+    RE_Norse_rebuild_mead_hall_of_lejre_desc: "The time has come to rebuild once profaned and destroyed Mead Hall of Lejre, in the old times of Beowulf owned by legendary king Hrólfr Kraki."
+    RE_Norse_rebuild_mead_hall_of_lejre.tooltip1: "Rebuild Mead Hall of Lejre"
+    RE_Norse_sanctify_holy_mountain_helgafell_title: "Sanctify Holy Mountain Helgafell"
+    RE_Norse_sanctify_holy_mountain_helgafell_desc: "The time has come to sanctify once profaned Holy Mountain Helgafell."
+    RE_Norse_sanctify_holy_mountain_helgafell.tooltip1: "Sanctify Holy Mountain Helgafell"
 
     #OPINIONS
     RE_Norse_viking_raid: "Viking Raid"
@@ -168,7 +190,7 @@
     RE_Norse_Events.22.t: "Holy Sites"
     RE_Norse_Events.22.d: "The old sacred places lie in ruins, destroyed or profaned by Christians.\n\nThe time has come to finally declare that no one is allowed to desecrate these holy places any longer! We shall take them back, arise our idols and ablaze sacred fires anew. And just then the blood of fools and unbelievers shall flow to make our gods laugh and give them honour, and victory, and prosperity until the whole world cracks apart in the flames of Ragnarok!"
     RE_Norse_Events.22.a: "It must be done."
-    RE_Norse_Events.22.a.tooltip1: "The holy sites of Norse faith are marked in:\n   Trondelag: §YTemple of Maere§!\n   Stockholm: §YTemple of Uppsala§!\n   Sjaelland: §YMead Hall of Lejre§!\n   Reykjavik: §YHoly Mountain Helgafell§!"
+    RE_Norse_Events.22.a.tooltip1: "The holy sites of Norse faith are marked in:\n\n   Trondelag: §YTemple of Maere§!\n   Stockholm: §YTemple of Uppsala§!\n   Sjaelland: §YMead Hall of Lejre§!\n   Reykjavik: §YHoly Mountain Helgafell§!\n\nThe sites were once destroyed, desecrated and thus it's duty of all Norse rulers to bring back their glory!"
     
     RE_Norse_Events.23.t: "Back to the Roots"
     RE_Norse_Events.23.d: "The country is almost broken! Heathens wander everywhere plundering and killing whoever stands against them. Our churches are burned, priest killed and nuns raped.\n\nSome say we are just at the brink of The Judgement Day and the others just simply claim there is no other way to solve the whole situation than surrender to heathens' demands and embrace the old ways of our forefathers. Maybe it is the highest time to accept the truth - our God is weak, abandoned us and no longer care.\n\nWhy to believe in such a miserable being?"
@@ -182,7 +204,7 @@
     RE_Norse_Events.24.a.tooltip1: "\nNon-pagan neighbour countries will despise us for performing such a ritual!"
     
     RE_Norse_Events.25.t: "The True Shieldmaiden!"
-    RE_Norse_Events.25.d: "As Norse, we do not categorise people by their gender or capability as there is always something important to do and to achieve for anyone willingly enough. And thus anyone in our society is equal and can equally take its part in getting honour, fame and glory of battle.\n\nIt is then not so rare to see fighting women among men on fields of battle where these intimidating beasts are fierce, brave and fearsome as any strong man.\n\nThe greatest among these women are called Shieldmaidens by our people and anyone knows there is nothing but a glory to gain by fighting side by side with them. From time to time, one of capable Shieldmaidens emerges from dirty battlefields to lead warriors in battle."
+    RE_Norse_Events.25.d: "As Norse, we do not categorise people by their gender or capability as there is always something important to do and to achieve for anyone determined enough. And thus anyone in our society is virtually equal and can equally take its part in getting honour, fame and glory of battle.\n\nAlthough for the most part Norse women stay home and take care of the hearth, it is not so rare to see them also dressed in chain mail, fighting among men on fields of battle where these intimidating beasts can be fierce, brave and fearsome as any strong man.\n\nThe greatest ones among them are called Shieldmaidens by our people and anyone knows there is nothing but a glory to gain by fighting side by side with these living Valkyries. From time to time, one of capable Shieldmaidens emerges from dirty battlefields to lead warriors in battle and they follow her orders willingly."
     RE_Norse_Events.25.a: "It pleases me"
     
     RE_Norse_Events.100.t: "Set Flag"

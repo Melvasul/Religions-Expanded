@@ -1,0 +1,138 @@
+country_decisions = {
+	RE_Norse_rebuild_temple_of_maere = {
+		major = yes
+		potential = {
+			religion = norse_pagan_reformed
+			owns_core_province = 20
+			20 = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				has_global_flag = RE_Norse_temple_of_maere_rebuilt
+			}
+			has_global_flag = RE_Norse_holy_sites_active
+		}
+		allow = {
+			years_of_income = 1
+		}
+		effect = {
+			add_years_of_income = -1
+			custom_tooltip = RE_Norse_rebuild_temple_of_maere.tooltip1
+			hidden_effect = {
+				set_global_flag = RE_Norse_temple_of_maere_rebuilt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					years_of_income = 1
+				}
+			}
+		}
+		ai_importance = 400
+	}
+	RE_Norse_rebuild_temple_of_uppsala = {
+		major = yes
+		potential = {
+			religion = norse_pagan_reformed
+			owns_core_province = 1
+			1 = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				has_global_flag = RE_Norse_temple_of_uppsala_rebuilt
+			}
+			has_global_flag = RE_Norse_holy_sites_active
+		}
+		allow = {
+			years_of_income = 1
+		}
+		effect = {
+			add_years_of_income = -1
+			custom_tooltip = RE_Norse_rebuild_temple_of_uppsala.tooltip1
+			hidden_effect = {
+				set_global_flag = RE_Norse_temple_of_uppsala_rebuilt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					years_of_income = 1
+				}
+			}
+		}
+		ai_importance = 400
+	}
+	RE_Norse_rebuild_mead_hall_of_lejre = {
+		major = yes
+		potential = {
+			religion = norse_pagan_reformed
+			owns_core_province = 12
+			12 = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				has_global_flag = RE_Norse_mead_hall_of_lejre_rebuilt
+			}
+			has_global_flag = RE_Norse_holy_sites_active
+		}
+		allow = {
+			years_of_income = 1
+		}
+		effect = {
+			add_years_of_income = -1
+			custom_tooltip = RE_Norse_rebuild_mead_hall_of_lejre.tooltip1
+			hidden_effect = {
+				set_global_flag = RE_Norse_mead_hall_of_lejre_rebuilt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					years_of_income = 1
+				}
+			}
+		}
+		ai_importance = 400
+	}
+	RE_Norse_sanctify_holy_mountain_helgafell = {
+		major = yes
+		potential = {
+			religion = norse_pagan_reformed
+			owns_core_province = 370
+			370 = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				has_global_flag = RE_Norse_mead_hall_of_lejre_rebuilt
+			}
+			has_global_flag = RE_Norse_holy_sites_active
+		}
+		allow = {
+			years_of_income = 1
+		}
+		effect = {
+			add_years_of_income = -1
+			custom_tooltip = RE_Norse_sanctify_holy_mountain_helgafell.tooltip1
+			hidden_effect = {
+				set_global_flag = RE_Norse_holy_mountain_helgafell_sanctified
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					years_of_income = 1
+				}
+			}
+		}
+		ai_importance = 400
+	}
+}

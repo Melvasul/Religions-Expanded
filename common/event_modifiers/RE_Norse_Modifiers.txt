@@ -80,3 +80,19 @@ RE_Norse_erected_runestone = {
 RE_Norse_refused_runestone = {
 	tolerance_own = -2
 }
+
+RE_Norse_temple_of_maere = {
+	church_loyalty_modifier = 0.025
+}
+
+RE_Norse_temple_of_uppsala = {
+	church_loyalty_modifier = 0.025
+}
+
+RE_Norse_mead_hall_of_lejre = {
+	church_loyalty_modifier = 0.025
+}
+
+RE_Norse_holy_mountain_helgafell = {
+	church_loyalty_modifier = 0.025
+}
