@@ -55,8 +55,18 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "RE_NORSE_SACRIFICE3_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SACRIFICE3_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "RE_NORSE_SEER_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_SEER_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "RE_NORSE_SHIELDMAIDEN_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_SHIELDMAIDEN_eventPicture.dds"
 		allwaystransparent = yes
 	}
 	spriteType = {
@@ -92,6 +102,11 @@ spriteTypes = {
 	spriteType = {
 		name = "RE_NORSE_VIKING_AFTER_BATTLE_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_VIKING_AFTER_BATTLE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "RE_NORSE_VIKING_IN_FLAMES_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_VIKING_IN_FLAMES_eventPicture.dds"
 		allwaystransparent = yes
 	}
 	spriteType = {

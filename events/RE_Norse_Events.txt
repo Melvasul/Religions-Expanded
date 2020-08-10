@@ -7,6 +7,12 @@ country_event = {
 	picture = RE_NORSE_RAVEN_MOON_eventPicture
 	trigger = {
 		culture_group = scandinavian
+		any_owned_province = {
+			OR = {
+				area = laponia_area
+				area = northern_norway
+			}
+		}
 		NOT = {
 			has_country_flag = RE_Norse_hail_odin
 		}
@@ -20,6 +26,12 @@ country_event = {
 			factor = 1
 		}
 		random_owned_province = {
+			limit = {
+				OR = {
+					area = laponia_area
+					area = northern_norway
+				}
+			}
 			set_province_flag = RE_Norse_current_infected
 		}
 		set_country_flag = RE_Norse_hail_odin
@@ -48,7 +60,7 @@ province_event = {
 		}
 	}
 	mean_time_to_happen = {
-		months = 90
+		months = 60
 	}
 	option = {
 		name = RE_Norse_Events.2.a
@@ -172,6 +184,9 @@ country_event = {
 			any_neighbor_province = {
 				owned_by = ROOT
 			}
+			NOT = {
+				has_province_modifier = religious_zeal_at_conv
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -194,11 +209,14 @@ country_event = {
 				any_neighbor_province = {
 					owned_by = ROOT
 				}
+				NOT = {
+					has_province_modifier = religious_zeal_at_conv
+				}
 			}
 			change_religion = norse_pagan_reformed
 			add_province_modifier = {
 				name = religious_zeal_at_conv
-				duration = 1825
+				duration = 3650
 			}
 			province_event = {
 				id = RE_Norse_Events.6
@@ -891,7 +909,7 @@ province_event = {
 	id = RE_Norse_Events.14
 	title = RE_Norse_Events.14.t
 	desc = RE_Norse_Events.14.d
-	picture = RE_NORSE_SACRIFICE_eventPicture
+	picture = RE_NORSE_SACRIFICE3_eventPicture
 	trigger = {
 		owner = {
 			religion = norse_pagan_reformed
@@ -1295,6 +1313,109 @@ country_event = {
 	}
 }
 
+#The Great Blót
+country_event = {
+	id = RE_Norse_Events.24
+	title = RE_Norse_Events.24.t
+	desc = RE_Norse_Events.24.d
+	picture = RE_NORSE_SACRIFICE_eventPicture
+	trigger = {
+		religion = norse_pagan_reformed
+		OR = {
+			NOT = {
+				has_country_flag = RE_Norse_the_great_blot
+			}
+			had_country_flag = {
+				flag = RE_Norse_the_great_blot
+				days = 3650
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = RE_Norse_Events.24.a
+		add_prestige = 10
+		add_adm_power = 100
+		add_years_of_income = 1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			desc = RE_Norse_estate_agreed_to_hold_the_great_blot
+			influence = 10
+			duration = 1825
+		}
+		if = {
+			limit = {
+				any_neighbor_country = {
+					NOT = {
+						religion_group = pagan
+					}
+				}
+			}
+			custom_tooltip = RE_Norse_Events.24.a.tooltip1
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						religion_group = pagan
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = RE_Norse_dislike_the_great_blot
+				}
+			}
+		}
+		set_country_flag = RE_Norse_the_great_blot
+		set_country_flag = RE_Norse_agreed_to_hold_the_great_blot
+		clr_country_flag = RE_Norse_disagreed_to_hold_the_great_blot
+	}
+	option = {
+		name = RE_Norse_Events.24.b
+		add_prestige = -5
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			desc = RE_Norse_estate_disagreed_to_hold_the_great_blot
+			influence = -20
+			duration = 1825
+		}
+		set_country_flag = RE_Norse_disagreed_to_hold_the_great_blot
+		clr_country_flag = RE_Norse_agreed_to_hold_the_great_blot
+	}
+}
+
+country_event = {
+	id = RE_Norse_Events.25
+	title = RE_Norse_Events.25.t
+	desc = RE_Norse_Events.25.d
+	picture = RE_NORSE_SHIELDMAIDEN_eventPicture
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+	mean_time_to_happen = {
+		months = 300
+	}
+	option = {
+		name = RE_Norse_Events.25.a
+		add_prestige = 5
+		define_general = {
+			name = "Shieldmaiden"
+			shock = 3
+			fire = 3
+			manuever = 3
+			siege = 3
+			female = yes
+		}
+	}
+}
 country_event = {
 	id = RE_Norse_Events.100
 	title = RE_Norse_Events.100.t

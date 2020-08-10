@@ -12,3 +12,8 @@ RE_Norse_proselyting_negative = {
 	opinion = -50
 	yearly_decay = 2
 }
+
+RE_Norse_dislike_the_great_blot = {
+	opinion = -50
+	yearly_decay = 2
+}

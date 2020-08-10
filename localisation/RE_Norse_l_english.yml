@@ -35,6 +35,11 @@
     RE_Norse_viking_raid: "Viking Raid"
     RE_Norse_proselyting_positive: "Spread Norse Faith"
     RE_Norse_proselyting_negative: "Spread Norse Faith"
+    RE_Norse_dislike_the_great_blot: "Performed The Great Heathen Ritual"
+    
+    #ESTATE_INFLUENCES
+    RE_Norse_estate_disagreed_to_hold_the_great_blot: "Disagreed to Hold the Great Blót"
+    RE_Norse_estate_agreed_to_hold_the_great_blot: "Agreed to Hold the Great Blót"
 
     #EVENTS
     RE_Norse_Events.1.t: "Where are the Ice Giants?"
@@ -130,7 +135,7 @@
     RE_Norse_Events.14.c: "Let them speak, it doesn't matter at all!"
     
     RE_Norse_Events.15.t: "We Are Worthy!"
-    RE_Norse_Events.15.d: "The sky is moving lazily above your head, rumbling low with cracks of lightnings that fill the view.\n\nYou feel the familiar tension in the air, the feeling of heavy, yet refreshing touch as if something was about to happen. The flesh beneath your skin tingles and hairs stand still on your nape.\n\nThe Thunderer is travelling through the sky, laughing in joy!"
+    RE_Norse_Events.15.d: "The sky is moving lazily above your head, rumbling low with cracks of lightnings that fill the horizon and travel jumpy from one cloud to another.\n\nYou feel the familiar tension in the air, the feeling of heavy touch as if a weighty hand fell on your chest and as if something was about to happen. Sultriness is almost unbearable; the thick drops of sweat are flowing down your face, dripping from the beard and wetting the chest. The flesh beneath your skin tingles and hairs stand still on the back of your nape.\n\nThe Thunderer is travelling through the sky, laughing in joy!"
     RE_Norse_Events.15.a: "All hail Thor Odinson, protector of mankind!"
     
     RE_Norse_Events.16.t: "Relentlessly Sailing West"
@@ -169,6 +174,16 @@
     RE_Norse_Events.23.d: "The country is almost broken! Heathens wander everywhere plundering and killing whoever stands against them. Our churches are burned, priest killed and nuns raped.\n\nSome say we are just at the brink of The Judgement Day and the others just simply claim there is no other way to solve the whole situation than surrender to heathens' demands and embrace the old ways of our forefathers. Maybe it is the highest time to accept the truth - our God is weak, abandoned us and no longer care.\n\nWhy to believe in such a miserable being?"
     RE_Norse_Events.23.a: "That's right! I can finally see the truth"
     RE_Norse_Events.23.b: "Heresy! Kill them all, Lord knows his own!"
+    
+    RE_Norse_Events.24.t: "The Great Blót"
+    RE_Norse_Events.24.d: "Our gods are strong and angry beings capable of marvellous things to do. Yet for them our world is just a mere playground and we all are their toys.\n\nThey want us to entertain them, make them laugh at our mistakes and be thrilled because of how we manage to achieve greatness or fall to ruin. Sometimes they remain silent, as if they did not care at all and we have to get their attention, no matter how dangerous it might turn out.\n\nFor their pleasure we hold The Great Blót, a festival during which we gather our slaves and appointed ones, as well as designated animals and just then the great sanctity begins!\n\nWe let the great river of blood flows in the name of our angry gods, begging them to grant us victory, to grant us strength, to make us wealth and to give them pleasure."
+    RE_Norse_Events.24.a: "Let the blood flows!"
+    RE_Norse_Events.24.b: "No, we're not gonna do that"
+    RE_Norse_Events.24.a.tooltip1: "\nNon-pagan neighbour countries will despise us for performing such a ritual!"
+    
+    RE_Norse_Events.25.t: "The True Shieldmaiden!"
+    RE_Norse_Events.25.d: "As Norse, we do not categorise people by their gender or capability as there is always something important to do and to achieve for anyone willingly enough. And thus anyone in our society is equal and can equally take its part in getting honour, fame and glory of battle.\n\nIt is then not so rare to see fighting women among men on fields of battle where these intimidating beasts are fierce, brave and fearsome as any strong man.\n\nThe greatest among these women are called Shieldmaidens by our people and anyone knows there is nothing but a glory to gain by fighting side by side with them. From time to time, one of capable Shieldmaidens emerges from dirty battlefields to lead warriors in battle."
+    RE_Norse_Events.25.a: "It pleases me"
     
     RE_Norse_Events.100.t: "Set Flag"
     RE_Norse_Events.100.d: "Set Flag"
