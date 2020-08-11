@@ -536,7 +536,7 @@ country_event = {
 				set_country_flag = RE_Norse_runesticks_effect1
 				#You are completely unable to decipher his riddles, damn!
 			}
-			2 = {
+			3 = {
 				set_country_flag = RE_Norse_runesticks_effect2
 				#You feel wiser as you march towards the war.
 			}
@@ -548,11 +548,11 @@ country_event = {
 				set_country_flag = RE_Norse_runesticks_effect4
 				#Omens, omens everywhere! You are lost!
 			}
-			2 = {
+			3 = {
 				set_country_flag = RE_Norse_runesticks_effect5
 				#Omens, omens everywhere! You are encouraged!
 			}
-			2 = {
+			3 = {
 				set_country_flag = RE_Norse_runesticks_effect6
 				#Now you know exactly what must be done!
 			}
@@ -898,7 +898,7 @@ country_event = {
 			limit = {
 				has_country_flag = RE_Norse_refused_to_cast_rune_sticks
 			}
-			add_stability = -2
+			add_stability = -1
 		}
 		set_country_flag = RE_Norse_visit_from_odin
 	}
@@ -1103,7 +1103,6 @@ country_event = {
 }
 
 #Set RE_Norse_current_living_king
-#Controls all after-dying things with rulers
 country_event = {
 	id = RE_Norse_Events.17
 	title = RE_Norse_Events.17.t
@@ -1113,6 +1112,7 @@ country_event = {
 	trigger = {
 		religion = norse_pagan_reformed
 		is_lesser_in_union = no
+		has_regency = no
 		NOT = {
 			has_ruler_flag = RE_Norse_current_living_king
 		}
@@ -1122,15 +1122,7 @@ country_event = {
 	}
 	immediate = {
 		set_ruler_flag = RE_Norse_current_living_king
-		if = {
-			limit = {
-				has_country_flag = RE_Norse_great_ruler_runestone
-			}
-			country_event = {
-				id = RE_Norse_Events.19
-			}
-			clr_country_flag = RE_Norse_great_ruler_runestone
-		}
+		RE_Norse_determine_gender_loc_for_ruler = yes
 	}
 	option = {
 		name = RE_Norse_Events.17.a
@@ -1158,18 +1150,6 @@ country_event = {
 	}
 	immediate = {
 		set_country_flag = RE_Norse_great_ruler_runestone
-		if = {
-			limit = {
-				is_female = yes
-			}
-			set_country_flag = RE_Norse_previous_she
-			set_country_flag = RE_Norse_previous_her
-		}
-		else = {
-			set_country_flag = RE_Norse_previous_he
-			set_country_flag = RE_Norse_previous_him
-			set_country_flag = RE_Norse_previous_his
-		}
 	}
 	option = {
 		name = RE_Norse_Events.18.a
@@ -1216,11 +1196,6 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
-			clr_country_flag = RE_Norse_previous_she
-			clr_country_flag = RE_Norse_previous_her
-			clr_country_flag = RE_Norse_previous_he
-			clr_country_flag = RE_Norse_previous_him
-			clr_country_flag = RE_Norse_previous_his
 			clr_country_flag = RE_Norse_great_ruler_runestone
 		}
 	}
@@ -1323,6 +1298,9 @@ country_event = {
 		months = 12
 	}
 	option = {
+		ai_chance = {
+			factor = 1
+		}
 		name = RE_Norse_Events.23.a
 		change_religion = norse_pagan_reformed
 		add_stability = -1
@@ -1360,6 +1338,9 @@ country_event = {
 	}
 	option = {
 		name = RE_Norse_Events.24.a
+		ai_chance = {
+			factor = 1
+		}
 		add_prestige = 10
 		add_adm_power = 100
 		add_years_of_income = 1
@@ -1394,6 +1375,7 @@ country_event = {
 				}
 			}
 		}
+		add_years_of_income = -0.5
 		set_country_flag = RE_Norse_the_great_blot
 		set_country_flag = RE_Norse_agreed_to_hold_the_great_blot
 		clr_country_flag = RE_Norse_disagreed_to_hold_the_great_blot
@@ -1426,23 +1408,125 @@ country_event = {
 		religion = norse_pagan_reformed
 	}
 	mean_time_to_happen = {
-		months = 300
+		months = 200
+	}
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				3 = {
+					set_country_flag = RE_Norse_shieldmaiden_random1
+				}
+				6 = {
+					set_country_flag = RE_Norse_shieldmaiden_random2
+				}
+				7 = {
+					set_country_flag = RE_Norse_shieldmaiden_random3
+				}
+				4 = {
+					set_country_flag = RE_Norse_shieldmaiden_random4
+				}
+				2 = {
+					set_country_flag = RE_Norse_shieldmaiden_random5
+				}
+				1 = {
+					set_country_flag = RE_Norse_shieldmaiden_random6
+				}
+			}
+		}
 	}
 	option = {
 		name = RE_Norse_Events.25.a
 		add_prestige = 5
-		define_general = {
-			name = "Shieldmaiden"
-			shock = 3
-			fire = 3
-			manuever = 3
-			siege = 3
-			female = yes
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_shieldmaiden_random1
+			}
+			define_general = {
+				name = "Shieldmaiden"
+				female = yes
+				shock = 1
+				fire = 1
+				manuever = 1
+				siege = 1
+			}
 		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_shieldmaiden_random2
+			}
+			define_general = {
+				name = "Shieldmaiden"
+				female = yes
+				shock = 2
+				fire = 2
+				manuever = 2
+				siege = 2
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_shieldmaiden_random3
+			}
+			define_general = {
+				name = "Shieldmaiden"
+				female = yes
+				shock = 3
+				fire = 3
+				manuever = 3
+				siege = 3
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_shieldmaiden_random4
+			}
+			define_general = {
+				name = "Shieldmaiden"
+				female = yes
+				shock = 4
+				fire = 4
+				manuever = 4
+				siege = 4
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_shieldmaiden_random5
+			}
+			define_general = {
+				name = "Shieldmaiden"
+				female = yes
+				shock = 5
+				fire = 5
+				manuever = 5
+				siege = 5
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_shieldmaiden_random6
+			}
+			define_general = {
+				name = "Shieldmaiden"
+				female = yes
+				shock = 6
+				fire = 6
+				manuever = 6
+				siege = 6
+			}
+		}
+	}
+	after = {
+		clr_country_flag = RE_Norse_shieldmaiden_random1
+		clr_country_flag = RE_Norse_shieldmaiden_random2
+		clr_country_flag = RE_Norse_shieldmaiden_random3
+		clr_country_flag = RE_Norse_shieldmaiden_random4
+		clr_country_flag = RE_Norse_shieldmaiden_random5
+		clr_country_flag = RE_Norse_shieldmaiden_random6
 	}
 }
 
-#Setter for Holy Sities Clery Equilibrium
+#Setter for Holy Sities Clergy Equilibrium
 country_event = {
 	id = RE_Norse_Events.26
 	title = RE_Norse_Events.26.t
@@ -1561,12 +1645,115 @@ country_event = {
 		}
 	}
 	option = {
-		ai_chance = {
-			factor = 1
-		}
 		name = RE_Norse_Events.26.a
 	}
 }
+
+#Shieldwall Formation
+country_event = {
+	id = RE_Norse_Events.27
+	title = RE_Norse_Events.27.t
+	desc = RE_Norse_Events.27.d
+	picture = RE_NORSE_SHIELDWALL_TURTLE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.8
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = defensive_ideas
+		}
+	}
+	option = {
+		name = RE_Norse_Events.27.a
+		ai_chance = {
+			factor = 2
+		}
+		add_country_modifier = {
+			name = RE_Norse_perfect_shieldwall_formation
+			duration = -1
+		}
+		custom_tooltip = RE_Norse_Events.27.a.tooltip1
+	}
+	option = {
+		name = RE_Norse_Events.27.b
+		ai_chance = {
+			factor = 1
+		}
+		change_innovativeness = 5
+		add_army_professionalism = 0.05
+		add_mil_power = 200
+		custom_tooltip = RE_Norse_Events.27.b.tooltip1
+		set_country_flag = RE_Norse_new_methods_and_means_of_warfare
+	}
+}
+
+#Fading Usefulness of Shieldwall
+country_event = {
+	id = RE_Norse_Events.28
+	title = RE_Norse_Events.28.t
+	desc = RE_Norse_Events.28.d
+	picture = RE_NORSE_SHIELDWALL_TURTLE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_country_modifier = RE_Norse_perfect_shieldwall_formation
+		OR = {
+			mil_tech = 13
+			any_neighbor_country = {
+				mil_tech = 12
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.01
+			OR = {
+				mil_tech = 14
+				any_neighbor_country = {
+					mil_tech = 13
+				}
+			}
+		}
+	}
+	option = {
+		name = RE_Norse_Events.28.a
+		remove_country_modifier = RE_Norse_perfect_shieldwall_formation
+	}
+}
+
+country_event = {
+	id = RE_Norse_Events.29
+	title = RE_Norse_Events.29.t
+	desc = RE_Norse_Events.29.d
+	picture = RE_NORSE_THUNDER_WAR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = RE_Norse_new_methods_and_means_of_warfare
+		mil_tech = 15
+	}
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			has_idea_group = offensive_ideas
+		}
+	}
+	option = {
+		name = RE_Norse_Events.29.a
+		add_country_modifier = {
+			name = RE_Norse_thunder_war_doctrine
+			duration = -1
+		}
+	}
+}
+
 
 country_event = {
 	id = RE_Norse_Events.100

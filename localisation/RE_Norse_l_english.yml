@@ -21,6 +21,8 @@
     RE_Norse_temple_of_uppsala: "Controls Temple of Uppsala"
     RE_Norse_mead_hall_of_lejre: "Controls Mead Hall of Lejre"
     RE_Norse_holy_mountain_helgafell: "Controls Holy Mountain Helgafell"
+    RE_Norse_perfect_shieldwall_formation: "Perfect Shieldwall Formation"
+    RE_Norse_thunder_war_doctrine: "Thunder War Doctrine"
     
     #PROVINCE_TRIGGERED_MODIFIERS
     RE_Norse_holy_site_temple_of_maere: "Temple of Maere\n§WClergy Estate Equilibrium:§! §G+2.5%§!"
@@ -111,7 +113,6 @@
     RE_Norse_Events.9.t: "The Seer"
     RE_Norse_Events.9.d: "In the eve of your march to the war, the Seer approaches and offers casting rune sticks to foretell your fate. You may agree and take a look in the upcoming future but be aware as Seers almost always speak in riddles.\n\nShould gods favour you, great things might be revealed and come to your aid but if you are not gods' favourite then you invite your doom!"
     RE_Norse_Events.9.a: "Let the veil be revealed..."
-    RE_Norse_Events.9.b: "No, definitely not!"
     RE_Norse_Events.9.b: "No, definitely not!"
     
     RE_Norse_Events.10.t: "Prophecy"
@@ -204,8 +205,27 @@
     RE_Norse_Events.24.a.tooltip1: "\nNon-pagan neighbour countries will despise us for performing such a ritual!"
     
     RE_Norse_Events.25.t: "The True Shieldmaiden!"
-    RE_Norse_Events.25.d: "As Norse, we do not categorise people by their gender or capability as there is always something important to do and to achieve for anyone determined enough. And thus anyone in our society is virtually equal and can equally take its part in getting honour, fame and glory of battle.\n\nAlthough for the most part Norse women stay home and take care of the hearth, it is not so rare to see them also dressed in chain mail, fighting among men on fields of battle where these intimidating beasts can be fierce, brave and fearsome as any strong man.\n\nThe greatest ones among them are called Shieldmaidens by our people and anyone knows there is nothing but a glory to gain by fighting side by side with these living Valkyries. From time to time, one of capable Shieldmaidens emerges from dirty battlefields to lead warriors in battle and they follow her orders willingly."
+    RE_Norse_Events.25.d: "As Norse, we do not categorise people by their gender or capability as there is always something important to do and to achieve for anyone determined enough. And thus everybody in our society is virtually equal and can equally take its part in getting honour, fame and glory of battle.\n\nAlthough for the most part Norse women stay home and take care of the hearth, it is not so rare to see them also dressed in chain mail, fighting among men on fields of battle where these intimidating beasts can be fierce, brave and fearsome as any strong man.\n\nThe greatest ones among them are called Shieldmaidens by our people and anyone knows there is nothing but a glory to gain by fighting side by side with these living Valkyries.\n\nFrom time to time, one of capable Shieldmaidens emerges from dirty battlefields to lead warriors in battle and they follow her orders willingly."
     RE_Norse_Events.25.a: "It pleases me"
+    
+    RE_Norse_Events.26.t: "Setter for Holy Sities Clergy Equilibrium"
+    RE_Norse_Events.26.d: "Setter for Holy Sities Clergy Equilibrium"
+    RE_Norse_Events.26.a: "Setter for Holy Sities Clergy Equilibrium"
+    
+    RE_Norse_Events.27.t: "Shieldwall Formation"
+    RE_Norse_Events.27.d: "Our ancestors adapted scraps of Roman warfare techniques of how to effectively stand in a formation on battlefield and over decades popularized a stance known as Shieldwall.\n\nThe stance is quite effective in a close combat, where the first ranks mostly hold the line, overlapping their shields with the shields of their neighbours and use short swords to jab into enemy positions; the following ranks often hold their shields high, overlapping them to make a defence against arrows and thrown tools while at the same time using long-shafted weapons to destroy or pull enemies' shields.\n\nIt is said by custom among our people that only in horrors of Shieldwall a man can become a true warrior. No matter how hard you train and learn, you are not recognized as a warrior until you go at the front of Shieldwall for the very first time in your life. Only then, and of course also only when you survive, you have the right to be known as a true fighter.\n\nShieldwall was utilised for generations and effectively adapted by many victorious armies. Yet, as the current battlefield quickly shapes and changes maybe is it the highest time to look forward into developing more modern methods and means of warfare?"
+    RE_Norse_Events.27.a: "Who needs any innovations when we already have perfectly murderous tool?"
+    RE_Norse_Events.27.a.tooltip1: "You will have a great advantage until firearms dominate battlefields."
+    RE_Norse_Events.27.b: "Only fool tries to stop the unavoidable. We have to constantly develop and adapt."
+    RE_Norse_Events.27.b.tooltip1: "\nYou will seek the new methods and means of warfare."
+    
+    RE_Norse_Events.28.t: "Fading Usefulness of Shieldwall"
+    RE_Norse_Events.28.d: "With the development of more convenient types of firearms the war has forever shifted its mean. Year by year more troops are equipped with weapons that could bring death from far away and no longer mere a wooden shield, no matter how sturdy it would be can protect its wielder from a deadly bullet.\n\nIn the face of such a change our previously perfectly viable strategy of utilising Shieldwall is being quickly depreciated with more warriors dead or gravely wounded.\n\nThe rules of axe and shield are finished, the times of bullets are upon us!"
+    RE_Norse_Events.28.a: "Who could have predicted that?"
+    
+    RE_Norse_Events.29.t: "New Dimension of Norse Warfare"
+    RE_Norse_Events.29.d: "It took us years of observing and developing, adapting to and experimenting with new inventions to finally draw the right conclusions.\n\nBy utilising our natural Norse ferocity and love for skirmishes and sorties, our most notable strategists invented the new doctrine of warfare by almost completely excluding stationary trade-offs of fire volleys\n\nThe doctrine is called "Thunder War" and draws upon quick and deadly manoeuvres with small bands of so-called fire teams which are responsible for making quick and deadly deep breakthroughs of enemy lines in order to widely encircle and divide their forces to spread terror and disorganisation in their lines. By not giving them time to recover, we are able to quickly overrun and annihilate their will to fight."
+    RE_Norse_Events.29.a: "Take that, Herr Barbarossa!"
     
     RE_Norse_Events.100.t: "Set Flag"
     RE_Norse_Events.100.d: "Set Flag"

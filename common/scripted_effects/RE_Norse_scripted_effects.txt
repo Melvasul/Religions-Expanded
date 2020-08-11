@@ -37,3 +37,18 @@ RE_Norse_spread_norse_faith = {
 		duration = 3650
 	}
 }
+
+RE_Norse_determine_gender_loc_for_ruler = {
+	if = {
+		limit = {
+			is_female = yes
+		}
+		set_country_flag = RE_Norse_previous_she
+		set_country_flag = RE_Norse_previous_her
+	}
+	else = {
+		set_country_flag = RE_Norse_previous_he
+		set_country_flag = RE_Norse_previous_him
+		set_country_flag = RE_Norse_previous_his
+	}
+}

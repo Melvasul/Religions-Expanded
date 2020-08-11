@@ -96,3 +96,12 @@ RE_Norse_mead_hall_of_lejre = {
 RE_Norse_holy_mountain_helgafell = {
 	church_loyalty_modifier = 0.025
 }
+
+RE_Norse_perfect_shieldwall_formation = {
+	shock_damage_received = -0.2
+	recover_army_morale_speed = 0.2
+}
+
+RE_Norse_thunder_war_doctrine = {
+	infantry_shock = 1
+}
