@@ -102,6 +102,44 @@ RE_Norse_perfect_shieldwall_formation = {
 	recover_army_morale_speed = 0.2
 }
 
-RE_Norse_thunder_war_doctrine = {
+RE_Norse_doctrine_lightning_strike = {
 	infantry_shock = 1
+}
+
+RE_Norse_doctrine_rolling_thunder = {
+	cavalry_fire = 1
+}
+
+RE_Norse_doctrine_crashing_thunderbolt = {
+	artillery_bonus_vs_fort = 1
+	backrow_artillery_damage = 0.05
+	artillery_shock = 0.5
+}
+
+RE_Norse_knowledge_of_administration_positive = {
+	adm_tech_cost_modifier = -0.1
+}
+
+RE_Norse_knowledge_of_diplomacy_positive = {
+	dip_tech_cost_modifier = -0.1
+}
+
+RE_Norse_knowledge_of_warfare_positive = {
+	mil_tech_cost_modifier = -0.1
+}
+
+RE_Norse_knowledge_of_administration_negative = {
+	adm_tech_cost_modifier = 0.1
+}
+
+RE_Norse_knowledge_of_diplomacy_negative = {
+	dip_tech_cost_modifier = 0.1
+}
+
+RE_Norse_knowledge_of_warfare_negative = {
+	mil_tech_cost_modifier = 0.1
+}
+
+RE_Norse_conducting_new_warfare_doctrine_research = {
+	mil_tech_cost_modifier = 0.1
 }

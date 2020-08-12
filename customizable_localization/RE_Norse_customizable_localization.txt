@@ -76,3 +76,24 @@ defined_text = {
 		}
 	}
 }
+defined_text = {
+	name = RE_Norse_doctrine_description
+	text = {
+		localisation_key = string_RE_Norse_doctrine_lightning_strike
+		trigger = {
+			has_country_flag = RE_Norse_new_warfare_doctrine_lightning_strike
+		}
+	}
+	text = {
+		localisation_key = string_RE_Norse_doctrine_rolling_thunder
+		trigger = {
+			has_country_flag = RE_Norse_new_warfare_doctrine_rolling_thunder
+		}
+	}
+	text = {
+		localisation_key = string_RE_Norse_doctrine_crashing_thunderbolt
+		trigger = {
+			has_country_flag = RE_Norse_new_warfare_doctrine_crashing_thunderbolt
+		}
+	}
+}

@@ -5,6 +5,16 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "RE_NORSE_COUNCIL_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_COUNCIL_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "RE_NORSE_CRASHING_THUNDERBOLT_DOCTRINE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_CRASHING_THUNDERBOLT_DOCTRINE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "RE_NORSE_DUEL_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_DUEL_eventPicture.dds"
 		allwaystransparent = yes
@@ -15,8 +25,18 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "RE_NORSE_LIGHTNING_STIKE_DOCTRINE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_LIGHTNING_STIKE_DOCTRINE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "RE_NORSE_LOOKING_AHEAD_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_LOOKING_AHEAD_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "RE_NORSE_MUSHROOMS_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_MUSHROOMS_eventPicture.dds"
 		allwaystransparent = yes
 	}
 	spriteType = {
@@ -37,6 +57,11 @@ spriteTypes = {
 	spriteType = {
 		name = "RE_NORSE_RAVENS_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_RAVENS_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "RE_NORSE_ROLLING_THUNDER_DOCTRINE_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_ROLLING_THUNDER_DOCTRINE_eventPicture.dds"
 		allwaystransparent = yes
 	}
 	spriteType = {
@@ -97,11 +122,6 @@ spriteTypes = {
 	spriteType = {
 		name = "RE_NORSE_THOR_IS_WORTHY_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_THOR_IS_WORTHY_eventPicture.dds"
-		allwaystransparent = yes
-	}
-	spriteType = {
-		name = "RE_NORSE_THUNDER_WAR_eventPicture"
-		texturefile = "gfx/event_pictures/RE_NORSE_THUNDER_WAR_eventPicture.dds"
 		allwaystransparent = yes
 	}
 	spriteType = {
