@@ -1,0 +1,466 @@
+namespace = RE_Norse_Events
+#Go Viking?
+country_event = {
+	id = RE_Norse_Events.7
+	title = RE_Norse_Events.7.t
+	desc = RE_Norse_Events.7.d
+	picture = RE_NORSE_SHIELDWALL_PREPARATION_eventPicture
+	trigger = {
+		religion = norse_pagan_reformed
+		any_neighbor_country = {
+			NOT = {
+				alliance_with = ROOT
+			}
+			NOT = {
+				overlord_of = ROOT
+			}
+			NOT = {
+				overlord = {
+					overlord_of = ROOT
+				}
+			}
+			NOT = {
+				is_subject_of = ROOT
+			}
+			any_owned_province = {
+				any_neighbor_province = {
+					owned_by = ROOT
+				}
+				NOT = {
+					has_province_modifier = RE_Norse_plundered_province
+				}
+				NOT = {
+					has_province_flag = RE_Norse_currently_being_plundered
+				}
+				OR = {
+					base_tax = 2
+					base_production = 2
+					base_manpower = 2
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = RE_Norse_Events.7.a
+		add_yearly_manpower = -0.1
+		random_neighbor_country = {
+			limit = {
+				NOT = {
+					alliance_with = ROOT
+				}
+				NOT = {
+					overlord_of = ROOT
+				}
+				NOT = {
+					overlord = {
+						overlord_of = ROOT
+					}
+				}
+				NOT = {
+					is_subject_of = ROOT
+				}
+				any_owned_province = {
+					any_neighbor_province = {
+						owned_by = ROOT
+					}
+					NOT = {
+						has_province_modifier = RE_Norse_plundered_province
+					}
+					NOT = {
+						has_province_flag = RE_Norse_currently_being_plundered
+					}
+					OR = {
+						base_tax = 2
+						base_production = 2
+						base_manpower = 2
+					}
+				}
+			}
+			custom_tooltip = RE_Norse_Events.7.a.tooltip1
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owned_by = ROOT
+					}
+					NOT = {
+						has_province_modifier = RE_Norse_plundered_province
+					}
+					NOT = {
+						has_province_flag = RE_Norse_currently_being_plundered
+					}
+					OR = {
+						base_tax = 2
+						base_production = 2
+						base_manpower = 2
+					}
+				}
+				hidden_effect = {
+					set_province_flag = RE_Norse_currently_being_plundered
+					province_event = {
+						id = RE_Norse_Events.8
+						days = 90
+						random = 90
+					}
+				}
+				custom_tooltip = RE_Norse_Events.7.a.tooltip2
+			}
+		}
+	}
+	option = {
+		name = RE_Norse_Events.7.b
+		add_prestige = -5
+	}
+}
+
+#Viking raid!
+province_event = {
+	id = RE_Norse_Events.8
+	title = RE_Norse_Events.8.t
+	desc = RE_Norse_Events.8.d
+	picture = RE_NORSE_BURNING_VILLAGE_eventPicture
+	goto = ROOT
+	is_triggered_only = yes
+	option = {
+		name = RE_Norse_Events.8.a
+		add_devastation = 10
+		custom_tooltip = RE_Norse_Events.8.a.tooltip1
+		hidden_effect = {
+			random_list = {
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							base_tax = 2
+						}
+					}
+					add_base_tax = -1
+					FROM = {
+						set_country_flag = RE_Norse_looted_tax
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							base_production = 2
+						}
+					}
+					add_base_production = -1
+					FROM = {
+						set_country_flag = RE_Norse_looted_production
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							base_manpower = 2
+						}
+					}
+					add_base_manpower = -1
+					FROM = {
+						set_country_flag = RE_Norse_looted_manpower
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = RE_Norse_plundered_province
+			duration = 3650
+		}
+		owner = {
+			add_casus_belli = {
+				type = cb_insult
+				target = FROM
+			}
+			add_opinion = {
+				who = FROM
+				modifier = RE_Norse_viking_raid
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = RE_Norse_Events.20
+					days = 90
+					random = 90
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			clr_province_flag = RE_Norse_currently_being_plundered
+		}
+	}
+}
+
+#Vikings Return
+country_event = {
+	id = RE_Norse_Events.20
+	title = RE_Norse_Events.20.t
+	desc = RE_Norse_Events.20.d
+	picture = RE_NORSE_VIKINGS_CHARGE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = RE_Norse_Events.20.a
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_years_of_income = 0.25
+		random_owned_province = {
+			limit = {
+				same_continent = capital
+			}
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = RE_Norse_looted_tax
+					}
+				}
+				add_base_tax = 1
+			}
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = RE_Norse_looted_production
+					}
+				}
+				add_base_production = 1
+			}
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = RE_Norse_looted_manpower
+					}
+				}
+				add_base_manpower = 1
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = RE_Norse_found_strange_chest
+					}
+				}
+				random = {
+					chance = 10
+					country_event = {
+						id = RE_Norse_Events.34
+					}
+				}
+			}
+		}
+	}
+}
+
+#Strange Chest
+country_event = {
+	id = RE_Norse_Events.34
+	title = RE_Norse_Events.34.t
+	desc = RE_Norse_Events.34.d
+	picture = RE_NORSE_CHEST_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = RE_Norse_Events.34.a
+		set_country_flag = RE_Norse_found_strange_chest
+		hidden_effect = {
+			random_list = {
+				6 = {
+					set_country_flag = RE_Norse_strange_chest_effect1
+					#You have found some gold coins inside!
+				}
+				6 = {
+					set_country_flag = RE_Norse_strange_chest_effect2
+					#You have found some gold coins inside!
+				}
+				5 = {
+					set_country_flag = RE_Norse_strange_chest_effect3
+					#You have found some gold coins inside!
+				}
+				5 = {
+					set_country_flag = RE_Norse_strange_chest_effect4
+					#You have found some gold coins inside!
+				}
+				3 = {
+					set_country_flag = RE_Norse_strange_chest_effect5
+					#You have found nice sum of gold inside!
+				}
+				2 = {
+					set_country_flag = RE_Norse_strange_chest_effect6
+					#You have found actually grand amount of gold inside!
+				}
+				1 = {
+					set_country_flag = RE_Norse_strange_chest_effect7
+					#On Odin's beard! You have found a true hoard inside!
+				}
+				2 = {
+					set_country_flag = RE_Norse_strange_chest_effect8
+					#There is a well made sword inside!
+				}
+				2 = {
+					set_country_flag = RE_Norse_strange_chest_effect9
+					#The scrolls full of knowledge were hidden inside!
+				}
+				1 = {
+					set_country_flag = RE_Norse_strange_chest_effect10
+					#The weighty tomes full of knowledge were hidden inside!
+				}
+				1 = {
+					set_country_flag = RE_Norse_strange_chest_effect11
+					#There is a weird tome inside full of foreign knowledge. You feel wiser!
+				}
+			}
+		}
+	}
+}
+
+#Strange Chest Opened!
+country_event = {
+	id = RE_Norse_Events.35
+	title = RE_Norse_Events.35.t
+	desc = RE_Norse_Events.35.d
+	picture = RE_NORSE_CHEST_eventPicture
+	trigger = {
+		has_country_flag = RE_Norse_found_strange_chest
+	}
+	mean_time_to_happen = {
+		months = 24
+	}
+	option = {
+		name = RE_Norse_Events.35.a
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect1
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip1
+			add_years_of_income = 0.1
+			clr_country_flag = RE_Norse_strange_chest_effect1
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect2
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip1
+			add_years_of_income = 0.25
+			clr_country_flag = RE_Norse_strange_chest_effect2
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect3
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip1
+			add_years_of_income = 0.5
+			clr_country_flag = RE_Norse_strange_chest_effect3
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect4
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip1
+			add_years_of_income = 0.75
+			clr_country_flag = RE_Norse_strange_chest_effect4
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect5
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip2
+			add_years_of_income = 1
+			clr_country_flag = RE_Norse_strange_chest_effect5
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect6
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip3
+			add_years_of_income = 2
+			clr_country_flag = RE_Norse_strange_chest_effect6
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect7
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip4
+			add_years_of_income = 5
+			clr_country_flag = RE_Norse_strange_chest_effect7
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect8
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip5
+			add_prestige_or_monarch_power = {
+				amount = 15
+			}
+			clr_country_flag = RE_Norse_strange_chest_effect8
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect9
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip6
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
+			clr_country_flag = RE_Norse_strange_chest_effect9
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect10
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip7
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			clr_country_flag = RE_Norse_strange_chest_effect10
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_strange_chest_effect11
+			}
+			custom_tooltip = RE_Norse_Events.35.a.tooltip8
+			if = {
+				limit = {
+					NOT = {
+						adm = 6
+					}
+				}
+				change_adm = 1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						dip = 6
+					}
+				}
+				change_dip = 1
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						mil = 6
+					}
+				}
+				change_mil = 1
+			}
+			else = {
+				add_stability_or_adm_power = yes
+				add_prestige_or_monarch_power = {
+					amount = 25
+				}
+			}
+			clr_country_flag = RE_Norse_strange_chest_effect11
+		}
+	}
+	after = {
+		clr_country_flag = RE_Norse_found_strange_chest
+	}
+}

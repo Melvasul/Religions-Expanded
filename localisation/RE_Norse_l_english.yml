@@ -118,6 +118,7 @@
     RE_Norse_Events.20.t: "Vikings Return from [From.GetName]!"
     RE_Norse_Events.20.d: "Our warriors have just got back from [From.GetName] hauling their loot. These riches will provide for families and of course for your country overall!\n\nThis is indeed a great day and people are happy to hear about such a successful sortie."
     RE_Norse_Events.20.a: "And happy am I!"
+    RE_Norse_Events.20.a.tooltip1: "Your warriors have also hauled some weird chest. In time you will find what is inside..."
     
     RE_Norse_Events.9.t: "The Seer"
     RE_Norse_Events.9.d: "In the eve of your march to the war, the Seer approaches and offers casting rune sticks to foretell your fate. You may agree and take a look in the upcoming future but be aware as Seers almost always speak in riddles.\n\nShould gods favour you, great things might be revealed and come to your aid but if you are not gods' favourite then you invite your doom!"
@@ -144,6 +145,9 @@
     RE_Norse_Events.10.a.tooltip15: "Everything you knew about administration has been proven wrong..."
     RE_Norse_Events.10.a.tooltip16: "Everything you knew about diplomacy has been proven wrong..."
     RE_Norse_Events.10.a.tooltip17: "Everything you knew about warfare has been proven wrong..."
+    RE_Norse_Events.10.a.tooltip18: "You know nothing, you are leading nowhere!"
+    RE_Norse_Events.10.a.tooltip19: "There will be a sign of good times of prosperity!"
+    RE_Norse_Events.10.a.tooltip20: "Something bad is brewing ahead in time, brace yourself!"
     
     RE_Norse_Events.11.t: "Clear flag RE_Norse_seer_runesticks"
     RE_Norse_Events.11.d: "Clear flag RE_Norse_seer_runesticks"
@@ -256,6 +260,32 @@
     RE_Norse_Events.31.c: "Focus on artillery doctrine"
     RE_Norse_Events.31.e: "These resources should be spend elsewhere..."
     RE_Norse_Events.31.tooltip1: "We will find the outcome in the upcoming years...\n"
+    
+    RE_Norse_Events.32.t: "The Sign of Prosperity"
+    RE_Norse_Events.32.d: "The great star is falling from the sky as it leaves the trail of smoke and fiery dust behind at the black night firmament.\n\nMany says this is the sign of hard times to come but you know for sure to afraid not! This is the prophesied sign! The promise of wellness and prosperity in your realm to come!\n\nHail Odin, men, hail him aloud and prepare for sacrificial rituals!"
+    RE_Norse_Events.32.a: "My lucky star!"
+    RE_Norse_Events.32.a.tooltip1: "Gain §G+25%§! prosperity in all fully §YNorse§! core states you own!"
+    
+    RE_Norse_Events.33.t: "Misfortune strikes!"
+    RE_Norse_Events.33.d: "The chain of many unexplainable and unlucky events led to an explosion of small provincial messes, accidents and barely understandable tensions.\n\nAll in all, the effect is quite catastrophic and people begin to speak about you being unlucky, bad ruler who is somehow responsible for that all.\n\nYou are almost sure that must be the effect of prophecy you once got."
+    RE_Norse_Events.33.a: "Oh, damn it all!"
+    RE_Norse_Events.33.a.tooltip1: "Lose §R-15%§! prosperity in all fully §YNorse§! core states you own!"
+    
+    RE_Norse_Events.34.t: "Strange Chest"
+    RE_Norse_Events.34.d: "It happens that your warriors have also hauled some strange heavy chest from their raid. Of course the chest was given to you but it will take some time until it be opened."
+    RE_Norse_Events.34.a: "Oh fine, store it somewhere safe..."
+    
+    RE_Norse_Events.35.t: "Strange Chest Opened!"
+    RE_Norse_Events.35.d: "It took some time to open that damn chest your warriors have once hauled from the raid but the work is finally done and you can see what is inside!"
+    RE_Norse_Events.35.a: "Great, let's check it!"
+    RE_Norse_Events.35.a.tooltip1: "You have found some gold coins inside!"
+    RE_Norse_Events.35.a.tooltip2: "You have found nice sum of gold inside!"
+    RE_Norse_Events.35.a.tooltip3: "You have found actually grand amount of gold inside!"
+    RE_Norse_Events.35.a.tooltip4: "On Odin's beard! You have found a true hoard inside!"
+    RE_Norse_Events.35.a.tooltip5: "There is a well made sword inside!"
+    RE_Norse_Events.35.a.tooltip6: "The scrolls full of knowledge were hidden inside!"
+    RE_Norse_Events.35.a.tooltip7: "The weighty tomes full of knowledge were hidden inside!"
+    RE_Norse_Events.35.a.tooltip8: "There is a weird tome inside full of foreign knowledge. You feel wiser!"
     
     RE_Norse_Events.100.t: "Set Flag"
     RE_Norse_Events.100.d: "Set Flag"

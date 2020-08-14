@@ -61,19 +61,17 @@ country_event = {
 					#Gods ignore you and maybe even despise you? Doom surely awaits...
 				}
 				1 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_ruler_flag = RE_Norse_victory_by_death
+							has_ruler_flag = RE_Norse_doomed_to_die
+						}
+					}
 					set_country_flag = RE_Norse_runesticks_effect10
 					#You shall gain victory by your death, fear not!
-					modifier = {
-						factor = 0
-						OR = {
-							has_ruler_flag = RE_Norse_victory_by_death
-							has_ruler_flag = RE_Norse_doomed_to_die
-						}
-					}
 				}
 				1 = {
-					set_country_flag = RE_Norse_runesticks_effect11
-					#Oh no, oh no, you are going to die!
 					modifier = {
 						factor = 0
 						OR = {
@@ -81,6 +79,8 @@ country_event = {
 							has_ruler_flag = RE_Norse_doomed_to_die
 						}
 					}
+					set_country_flag = RE_Norse_runesticks_effect11
+					#Oh no, oh no, you are going to die!
 				}
 				3 = {
 					set_country_flag = RE_Norse_runesticks_effect12
@@ -105,6 +105,26 @@ country_event = {
 				1 = {
 					set_country_flag = RE_Norse_runesticks_effect17
 					#Everything you knew about warfare has been proven wrong... 
+				}
+				1 = {
+					set_country_flag = RE_Norse_runesticks_effect18
+					#You know nothing, you are leading nowhere! 
+				}
+				2 = {
+					modifier = {
+						factor = 0
+						has_country_flag = RE_Norse_sign_of_prosperity
+					}
+					set_country_flag = RE_Norse_runesticks_effect19
+					#There shall be a sign of prosperity!
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_country_flag = RE_Norse_misfortune_strikes
+					}
+					set_country_flag = RE_Norse_runesticks_effect20
+					#Misfortune shall strike your lands!
 				}
 			}
 		}
@@ -138,7 +158,9 @@ country_event = {
 				has_country_flag = RE_Norse_runesticks_effect2
 			}
 			custom_tooltip = RE_Norse_Events.10.a.tooltip2
-			add_prestige = 5
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
 			add_adm_power = 50
 			add_dip_power = 50
 			add_mil_power = 50
@@ -173,7 +195,9 @@ country_event = {
 				has_country_flag = RE_Norse_runesticks_effect5
 			}
 			custom_tooltip = RE_Norse_Events.10.a.tooltip5
-			add_prestige = 5
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
 			add_country_modifier = {
 				name = RE_Norse_encouraged_by_omens
 				duration = 1825
@@ -210,7 +234,9 @@ country_event = {
 			}
 			custom_tooltip = RE_Norse_Events.10.a.tooltip8
 			add_stability_or_adm_power = yes
-			add_prestige = 10
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
 			add_country_modifier = {
 				name = RE_Norse_gods_chosen_one
 				duration = 1825
@@ -235,7 +261,9 @@ country_event = {
 				has_country_flag = RE_Norse_runesticks_effect10
 			}
 			custom_tooltip = RE_Norse_Events.10.a.tooltip10
-			add_prestige = 10
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
 			set_ruler_flag = RE_Norse_victory_by_death
 			clr_country_flag = RE_Norse_runesticks_effect10
 		}
@@ -252,7 +280,10 @@ country_event = {
 			limit = {
 				has_country_flag = RE_Norse_runesticks_effect12
 			}
-			add_prestige = 5
+			custom_tooltip = RE_Norse_Events.10.a.tooltip12
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
 			add_adm_power = 50
 			add_country_modifier = {
 				name = RE_Norse_knowledge_of_administration_positive
@@ -264,7 +295,10 @@ country_event = {
 			limit = {
 				has_country_flag = RE_Norse_runesticks_effect13
 			}
-			add_prestige = 5
+			custom_tooltip = RE_Norse_Events.10.a.tooltip13
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
 			add_dip_power = 50
 			add_country_modifier = {
 				name = RE_Norse_knowledge_of_diplomacy_positive
@@ -276,7 +310,10 @@ country_event = {
 			limit = {
 				has_country_flag = RE_Norse_runesticks_effect14
 			}
-			add_prestige = 5
+			custom_tooltip = RE_Norse_Events.10.a.tooltip14
+			add_prestige_or_monarch_power = {
+				amount = 5
+			}
 			add_mil_power = 50
 			add_country_modifier = {
 				name = RE_Norse_knowledge_of_warfare_positive
@@ -288,6 +325,7 @@ country_event = {
 			limit = {
 				has_country_flag = RE_Norse_runesticks_effect15
 			}
+			custom_tooltip = RE_Norse_Events.10.a.tooltip15
 			add_prestige = -5
 			add_adm_power = -25
 			add_country_modifier = {
@@ -300,6 +338,7 @@ country_event = {
 			limit = {
 				has_country_flag = RE_Norse_runesticks_effect16
 			}
+			custom_tooltip = RE_Norse_Events.10.a.tooltip16
 			add_prestige = -5
 			add_dip_power = -25
 			add_country_modifier = {
@@ -312,6 +351,7 @@ country_event = {
 			limit = {
 				has_country_flag = RE_Norse_runesticks_effect17
 			}
+			custom_tooltip = RE_Norse_Events.10.a.tooltip17
 			add_prestige = -5
 			add_mil_power = -25
 			add_country_modifier = {
@@ -319,6 +359,37 @@ country_event = {
 				duration = 1850
 			}
 			clr_country_flag = RE_Norse_runesticks_effect17
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_runesticks_effect18
+			}
+			custom_tooltip = RE_Norse_Events.10.a.tooltip18
+			add_prestige = -5
+			add_adm_power = -15
+			add_dip_power = -15
+			add_mil_power = -15
+			clr_country_flag = RE_Norse_runesticks_effect18
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_runesticks_effect19
+			}
+			custom_tooltip = RE_Norse_Events.10.a.tooltip19
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			set_country_flag = RE_Norse_sign_of_prosperity
+			clr_country_flag = RE_Norse_runesticks_effect19
+		}
+		if = {
+			limit = {
+				has_country_flag = RE_Norse_runesticks_effect20
+			}
+			custom_tooltip = RE_Norse_Events.10.a.tooltip20
+			add_prestige = -10
+			set_country_flag = RE_Norse_misfortune_strikes
+			clr_country_flag = RE_Norse_runesticks_effect20
 		}
 	}
 }
@@ -412,7 +483,9 @@ country_event = {
 			ROOT = {
 				kill_ruler = yes
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
 			add_country_modifier = {
 				name = RE_Norse_ruler_gone_to_valhalla
 				duration = 3650
@@ -432,6 +505,104 @@ country_event = {
 				duration = 3650
 			}
 			clr_ruler_flag = RE_Norse_doomed_to_die
+		}
+	}
+}
+
+#The Sign of Prosperity
+country_event = {
+	id = RE_Norse_Events.32
+	title = RE_Norse_Events.32.t
+	desc = RE_Norse_Events.32.d
+	picture = RE_NORSE_FALLING_STAR_eventPicture
+	trigger = {
+		has_country_flag = RE_Norse_sign_of_prosperity
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = RE_Norse_Events.32.a
+		add_stability_or_adm_power = yes
+		custom_tooltip = RE_Norse_Events.32.a.tooltip1
+		while = {
+			limit = {
+				any_owned_province = {
+					NOT = {
+						has_province_flag = RE_Norse_checked_for_prosperity
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_state_core = ROOT
+					all_province_in_state = {
+						religion = norse_pagan_reformed
+					}
+					NOT = {
+						has_province_flag = RE_Norse_checked_for_prosperity
+					}
+				}
+				add_prosperity = 25
+				every_province_in_state = {
+					set_province_flag = RE_Norse_checked_for_prosperity
+				}
+			}
+		}
+	}
+	after = {
+		clr_country_flag = RE_Norse_sign_of_prosperity
+		every_owned_province = {
+			clr_province_flag = RE_Norse_checked_for_prosperity
+		}
+	}
+}
+
+#Misfortune strikes!
+country_event = {
+	id = RE_Norse_Events.33
+	title = RE_Norse_Events.33.t
+	desc = RE_Norse_Events.33.d
+	picture = RE_NORSE_VIKING_IN_FLAMES_eventPicture
+	trigger = {
+		has_country_flag = RE_Norse_misfortune_strikes
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = RE_Norse_Events.33.a
+		add_stability = -1
+		custom_tooltip = RE_Norse_Events.33.a.tooltip1
+		while = {
+			limit = {
+				any_owned_province = {
+					NOT = {
+						has_province_flag = RE_Norse_checked_for_misfortune
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_state_core = ROOT
+					all_province_in_state = {
+						religion = norse_pagan_reformed
+					}
+					NOT = {
+						has_province_flag = RE_Norse_checked_for_misfortune
+					}
+				}
+				add_prosperity = -15
+				every_province_in_state = {
+					set_province_flag = RE_Norse_checked_for_misfortune
+				}
+			}
+		}
+	}
+	after = {
+		clr_country_flag = RE_Norse_misfortune_strikes
+		every_owned_province = {
+			clr_province_flag = RE_Norse_checked_for_misfortune
 		}
 	}
 }

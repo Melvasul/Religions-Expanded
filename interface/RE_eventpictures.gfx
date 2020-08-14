@@ -5,6 +5,11 @@ spriteTypes = {
 		allwaystransparent = yes
 	}
 	spriteType = {
+		name = "RE_NORSE_CHEST_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_CHEST_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
 		name = "RE_NORSE_COUNCIL_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_COUNCIL_eventPicture.dds"
 		allwaystransparent = yes
@@ -22,6 +27,11 @@ spriteTypes = {
 	spriteType = {
 		name = "RE_NORSE_DYING_WITH_SWORD_eventPicture"
 		texturefile = "gfx/event_pictures/RE_NORSE_DYING_WITH_SWORD_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "RE_NORSE_FALLING_STAR_eventPicture"
+		texturefile = "gfx/event_pictures/RE_NORSE_FALLING_STAR_eventPicture.dds"
 		allwaystransparent = yes
 	}
 	spriteType = {
